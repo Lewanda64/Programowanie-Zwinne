@@ -42,7 +42,7 @@ private String opis;
 private LocalDateTime dataczasUtworzenia;
 
 @LastModifiedDate
-@Column(name = "dataczas_modyfikacji")
+@Column(name = "dataczas_modyfikacji", insertable = false)
 private LocalDateTime lastModifiedDate;
 
 @Column(name = "data_oddania")
