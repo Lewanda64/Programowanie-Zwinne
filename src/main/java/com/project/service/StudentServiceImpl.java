@@ -1,5 +1,75 @@
 package com.project.service;
 
-public class StudentServiceImpl {
+import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import com.project.model.Student;
+import com.project.repository.StudentRepository;
+
+@Service
+public class StudentServiceImpl implements StudentService {
+
+    private final StudentRepository studentRepository;
+
+    @Autowired
+    public StudentServiceImpl(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
+
+    @Override
+    public Optional<Student> getStudent(Integer studentId) {
+        return studentRepository.findById(studentId);
+    }
+
+    @Override
+    public Student setStudent(Student student) {
+        if (student.getStudentId() == null) {
+            return studentRepository.save(student);
+        }
+
+        Student existing = studentRepository.findById(student.getStudentId())
+                .orElseThrow(() -> new IllegalArgumentException(
+                        "Student o id=" + student.getStudentId() + " nie istnieje"));
+
+        existing.setImie(student.getImie());
+        existing.setNazwisko(student.getNazwisko());
+        existing.setNrIndeksu(student.getNrIndeksu());
+        existing.setEmail(student.getEmail());
+        existing.setStacjonarny(student.getStacjonarny());
+
+        // relacja many-to-many (jeśli przesyłasz ją w JSON i chcesz ją nadpisywać)
+        existing.setProjekty(student.getProjekty());
+
+        return studentRepository.save(existing);
+    }
+
+    @Override
+    public void deleteStudent(Integer studentId) {
+        studentRepository.deleteById(studentId);
+    }
+
+    @Override
+    public Page<Student> getStudenci(Pageable pageable) {
+        return studentRepository.findAll(pageable);
+    }
+
+    @Override
+    public Page<Student> searchByNazwisko(String nazwisko, Pageable pageable) {
+        if (nazwisko == null || nazwisko.isBlank()) {
+            return studentRepository.findAll(pageable);
+        }
+        return studentRepository.findByNazwiskoStartsWithIgnoreCase(nazwisko, pageable);
+    }
+
+    @Override
+    public Optional<Student> getByNrIndeksu(String nrIndeksu) {
+        if (nrIndeksu == null || nrIndeksu.isBlank()) {
+            return Optional.empty();
+        }
+        return studentRepository.findByNrIndeksu(nrIndeksu);
+    }
 }
