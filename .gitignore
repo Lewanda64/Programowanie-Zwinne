@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# lokalny front podczas integracji
+src/main/resources/static/**
+!src/main/resources/static/.keep
