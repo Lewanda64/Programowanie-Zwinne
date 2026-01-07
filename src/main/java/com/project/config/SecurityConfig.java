@@ -10,7 +10,12 @@ public class SecurityConfig {
 public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
  return httpSecurity
  .csrf(csrf -> csrf.disable())
- .authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
+//.authorizeHttpRequests(auth -> auth.anyRequest().authenticated()) // na czas statycznej integracji wyłączone.
+ .authorizeHttpRequests(auth -> auth
+ .requestMatchers("/*.html", "/css/**", "/js/**", "/images/**", "/favicon.ico").permitAll()
+ .requestMatchers("/api/**").authenticated()
+ .anyRequest().permitAll()
+ )
  .httpBasic(Customizer.withDefaults())
  .build();
 }
