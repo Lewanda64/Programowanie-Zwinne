@@ -18,10 +18,12 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.JoinColumn;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import jakarta.persistence.EntityListeners;
 
 @Entity
-@Table(name="projekt") //TODO Indeksować kolumny, które są najczęściej wykorzystywane do wyszukiwania projektów (Pozniej jak bedziemy wiedzieli co oplaca sie indeksowac)
+@Table(name="projekt")
+@EntityListeners(AuditingEntityListener.class) //TODO Indeksować kolumny, które są najczęściej wykorzystywane do wyszukiwania projektów (Pozniej jak bedziemy wiedzieli co oplaca sie indeksowac)
 public class Projekt {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
