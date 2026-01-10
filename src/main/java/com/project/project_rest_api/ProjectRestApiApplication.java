@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.boot.persistence.autoconfigure.EntityScan;
 
-@EnableJpaAuditing
 @SpringBootApplication(scanBasePackages = {"com.project", "com.project.project_rest_api"})
 @EnableJpaRepositories(basePackages = "com.project.repository")
 @EntityScan(basePackages = "com.project.model")
