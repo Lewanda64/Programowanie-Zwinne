@@ -19,6 +19,10 @@ public interface StudentService {
 
     Page<Student> getStudenci(Pageable pageable);
 
+    Page<Student> searchByEmail(String email, Pageable pageable);
+
+    Page<Student> searchByImie(String imie, Pageable pageable);
+
     Page<Student> searchByNazwisko(String nazwisko, Pageable pageable);
 
     Optional<Student> getByNrIndeksu(String nrIndeksu);

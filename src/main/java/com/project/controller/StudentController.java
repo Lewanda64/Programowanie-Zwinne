@@ -83,6 +83,20 @@ public class StudentController {
         return studentService.getStudenci(pageable);
     }
 
+    // GET http://localhost:8080/api/studenci?email=jan&page=0&size=10
+    @GetMapping(value = "/studenci", params = "email")
+    public Page<Student> getStudenciByEmail(@RequestParam(name = "email") String email,
+                                            Pageable pageable) {
+        return studentService.searchByEmail(email, pageable);
+    }
+
+    // GET http://localhost:8080/api/studenci?imie=Jan&page=0&size=10
+    @GetMapping(value = "/studenci", params = "imie")
+    public Page<Student> getStudenciByImie(@RequestParam(name = "imie") String imie,
+                                           Pageable pageable) {
+        return studentService.searchByImie(imie, pageable);
+    }
+
     // GET http://localhost:8080/api/studenci?nazwisko=Kow&page=0&size=10
     @GetMapping(value = "/studenci", params = "nazwisko")
     public Page<Student> getStudenciByNazwisko(@RequestParam(name = "nazwisko") String nazwisko,

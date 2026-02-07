@@ -66,6 +66,22 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public Page<Student> searchByEmail(String email, Pageable pageable) {
+        if (email == null || email.isBlank()) {
+            return studentRepository.findAll(pageable);
+        }
+        return studentRepository.findByEmailStartsWithIgnoreCase(email, pageable);
+    }
+
+    @Override
+    public Page<Student> searchByImie(String imie, Pageable pageable) {
+        if (imie == null || imie.isBlank()) {
+            return studentRepository.findAll(pageable);
+        }
+        return studentRepository.findByImieStartsWithIgnoreCase(imie, pageable);
+    }
+
+    @Override
     public Page<Student> searchByNazwisko(String nazwisko, Pageable pageable) {
         if (nazwisko == null || nazwisko.isBlank()) {
             return studentRepository.findAll(pageable);
