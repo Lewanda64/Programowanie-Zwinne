@@ -39,7 +39,7 @@ public class ZadanieController {
     // POST http://localhost:8080/api/zadania
     @PostMapping("/zadania")
     public ResponseEntity<Void> createZadanie(@Valid @RequestBody Zadanie zadanie) {
-        Zadanie created = zadanieService.setZadanie(zadanie);
+        Zadanie created = zadanieService.createZadanie(zadanie);
 
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
@@ -58,7 +58,7 @@ public class ZadanieController {
         return zadanieService.getZadanie(zadanieId)
                 .map(z -> {
                     zadanie.setZadanieId(zadanieId); // ważne
-                    zadanieService.setZadanie(zadanie);
+                    zadanieService.updateZadanie(zadanie);
                     return new ResponseEntity<Void>(HttpStatus.OK);
                 })
                 .orElseGet(() -> ResponseEntity.notFound().build());

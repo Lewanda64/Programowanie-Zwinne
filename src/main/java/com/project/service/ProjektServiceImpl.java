@@ -26,11 +26,19 @@ public class ProjektServiceImpl implements ProjektService {
     }
 
     @Override
-    public Projekt setProjekt(Projekt projekt) {
-        if (projekt.getProjektId() == null) {
-            return projektRepository.save(projekt);
+    public Projekt createProjekt(Projekt projekt) {
+        if (projekt.getProjektId() != null) {
+            throw new IllegalArgumentException("Nowy projekt nie powinien miec ustawionego ID");
         }
-        
+        return projektRepository.save(projekt);
+    }
+
+    @Override
+    public Projekt updateProjekt(Projekt projekt) {
+        if (projekt.getProjektId() == null) {
+            throw new IllegalArgumentException("Projekt do aktualizacji musi miec ustawione ID");
+        }
+
         Projekt existing = projektRepository.findById(projekt.getProjektId())
                 .orElseThrow(() -> new IllegalArgumentException(
                         "Projekt o id=" + projekt.getProjektId() + " nie istnieje"));

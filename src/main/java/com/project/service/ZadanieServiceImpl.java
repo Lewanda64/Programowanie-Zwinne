@@ -26,11 +26,19 @@ public class ZadanieServiceImpl implements ZadanieService {
     }
 
     @Override
-    public Zadanie setZadanie(Zadanie zadanie) {
+    public Zadanie createZadanie(Zadanie zadanie) {
         // tu zakładamy, że "zadanie.projekt" jest już ustawione w żądaniu (JSON),
         // bo w tabeli jest FK projekt_id NOT NULL
+        if (zadanie.getZadanieId() != null) {
+            throw new IllegalArgumentException("Nowe zadanie nie powinno miec ustawionego ID");
+        }
+        return zadanieRepository.save(zadanie);
+    }
+
+    @Override
+    public Zadanie updateZadanie(Zadanie zadanie) {
         if (zadanie.getZadanieId() == null) {
-            return zadanieRepository.save(zadanie);
+            throw new IllegalArgumentException("Zadanie do aktualizacji musi miec ustawione ID");
         }
 
         Zadanie existing = zadanieRepository.findById(zadanie.getZadanieId())

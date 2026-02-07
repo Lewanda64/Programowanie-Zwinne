@@ -40,7 +40,7 @@ public class StudentController {
     // POST http://localhost:8080/api/studenci
     @PostMapping("/studenci")
     public ResponseEntity<Void> createStudent(@Valid @RequestBody Student student) {
-        Student created = studentService.setStudent(student);
+        Student created = studentService.createStudent(student);
 
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
@@ -59,7 +59,7 @@ public class StudentController {
         return studentService.getStudent(studentId)
                 .map(s -> {
                     student.setStudentId(studentId); // ważne
-                    studentService.setStudent(student);
+                    studentService.updateStudent(student);
                     return new ResponseEntity<Void>(HttpStatus.OK);
                 })
                 .orElseGet(() -> ResponseEntity.notFound().build());

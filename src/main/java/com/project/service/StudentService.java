@@ -11,7 +11,9 @@ public interface StudentService {
 
     Optional<Student> getStudent(Integer studentId);
 
-    Student setStudent(Student student);
+    Student createStudent(Student student);
+
+    Student updateStudent(Student student);
 
     void deleteStudent(Integer studentId);
 

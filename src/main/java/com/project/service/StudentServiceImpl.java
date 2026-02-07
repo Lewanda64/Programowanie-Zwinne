@@ -26,9 +26,17 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student setStudent(Student student) {
+    public Student createStudent(Student student) {
+        if (student.getStudentId() != null) {
+            throw new IllegalArgumentException("Nowy student nie powinien miec ustawionego ID");
+        }
+        return studentRepository.save(student);
+    }
+
+    @Override
+    public Student updateStudent(Student student) {
         if (student.getStudentId() == null) {
-            return studentRepository.save(student);
+            throw new IllegalArgumentException("Student do aktualizacji musi miec ustawione ID");
         }
 
         Student existing = studentRepository.findById(student.getStudentId())

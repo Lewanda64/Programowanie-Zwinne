@@ -11,7 +11,9 @@ public interface ZadanieService {
 
     Optional<Zadanie> getZadanie(Integer zadanieId);
 
-    Zadanie setZadanie(Zadanie zadanie);
+    Zadanie createZadanie(Zadanie zadanie);
+
+    Zadanie updateZadanie(Zadanie zadanie);
 
     void deleteZadanie(Integer zadanieId);
 

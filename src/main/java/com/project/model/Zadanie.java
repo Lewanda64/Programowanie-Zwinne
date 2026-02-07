@@ -17,10 +17,13 @@ import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.CreatedDate;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import jakarta.persistence.EntityListeners;
 
 
 @Entity
 @Table(name = "zadanie")
+@EntityListeners(AuditingEntityListener.class)
 public class Zadanie {
 
     @Id

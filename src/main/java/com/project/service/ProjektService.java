@@ -5,7 +5,8 @@ import org.springframework.data.domain.Pageable;
 import com.project.model.Projekt;
 public interface ProjektService {
  Optional<Projekt> getProjekt(Integer projektId);
- Projekt setProjekt(Projekt projekt);
+ Projekt createProjekt(Projekt projekt);
+ Projekt updateProjekt(Projekt projekt);
  void deleteProjekt(Integer projektId);
  Page<Projekt> getProjekty(Pageable pageable);
  Page<Projekt> searchByNazwa(String nazwa, Pageable pageable);

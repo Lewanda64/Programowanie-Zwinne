@@ -43,7 +43,7 @@ public class ProjektController {
  @PostMapping(path = "/projekty")
  ResponseEntity<Void> createProjekt(@Valid @RequestBody Projekt projekt) {// @RequestBody oznacza, że dane 
  // projektu (w formacie JSON) są 
- Projekt createdProjekt = projektService.setProjekt(projekt); // przekazywane w ciele żądania 
+ Projekt createdProjekt = projektService.createProjekt(projekt); // przekazywane w ciele żądania 
  URI location = ServletUriComponentsBuilder.fromCurrentRequest() // link wskazujący utworzony projekt 
  .path("/{projektId}").buildAndExpand(createdProjekt.getProjektId()).toUri();
  return ResponseEntity.created(location).build(); // zwracany jest kod odpowiedzi 201 - Created 
@@ -53,7 +53,8 @@ public class ProjektController {
 @PathVariable("projektId") Integer projektId) {
  return projektService.getProjekt(projektId)
  .map(p -> {
- projektService.setProjekt(projekt);
+ projekt.setProjektId(projektId);
+ projektService.updateProjekt(projekt);
  return new ResponseEntity<Void>(HttpStatus.OK); // 200 (można też zwracać 204 - No content)
  }) 
  .orElseGet(() -> ResponseEntity.notFound().build()); // 404 - Not found
