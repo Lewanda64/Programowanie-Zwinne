@@ -15,6 +15,7 @@ import jakarta.validation.constraints.Size;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.NotNull;
 
 
@@ -51,6 +52,13 @@ public class Student {
     @Size(max = 50)
     @Column(length = 50, unique = true)
     private String email;
+
+    @JsonIgnore
+    @Column(length = 100)
+    private String password;
+
+    @Column(length = 20)
+    private String role;
 
     @NotNull(message = "Pole stacjonarny nie może być puste!")
     @Column(nullable = false)
@@ -115,6 +123,22 @@ public class Student {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 	public Boolean getStacjonarny() {

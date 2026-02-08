@@ -1,10 +1,16 @@
 # EndPoints Snapshot
 
-Data i godzina: 2026-02-07 19:45:46 CET
+Data i godzina: 2026-02-07 23:57:26 CET
 
 ## Informacje ogolne
 - Bazowa sciezka: `/api`
 - Zrodlo: kontrolery REST w `src/main/java/com/project/controller`
+
+## Role i dostep
+- `/api/register` jest publiczne (permitAll) i sluzy do samorejestracji (rola USER).
+- `/api/studenci/**` jest tylko dla ADMIN.
+- `/api/projekty/**` i `/api/zadania/**` sa dostepne dla USER i ADMIN.
+- `POST /api/register` moze zwracac naglowek `Location` wskazujacy `/api/studenci/{id}`; ten endpoint jest ADMIN-only, wiec zwykly USER dostanie 403 przy follow-up.
 
 ## Projekt
 
@@ -110,8 +116,9 @@ Data i godzina: 2026-02-07 19:45:46 CET
 
 | Metoda | Sciezka | Opis |
 | --- | --- | --- |
+| POST | `/api/register` | Rejestracja studenta (publiczna) |
 | GET | `/api/studenci/{studentId}` | Pobranie studenta po ID |
-| POST | `/api/studenci` | Utworzenie studenta |
+| POST | `/api/studenci` | Utworzenie studenta (admin) |
 | PUT | `/api/studenci/{studentId}` | Aktualizacja studenta |
 | DELETE | `/api/studenci/{studentId}` | Usuniecie studenta |
 | GET | `/api/studenci` | Lista studentow (paginacja) |
@@ -119,6 +126,24 @@ Data i godzina: 2026-02-07 19:45:46 CET
 | GET | `/api/studenci?imie={imie}` | Lista studentow filtrowana po imieniu |
 | GET | `/api/studenci?nazwisko={nazwisko}` | Lista studentow filtrowana po nazwisku |
 | GET | `/api/studenci/nrIndeksu/{nrIndeksu}` | Pobranie studenta po numerze indeksu |
+
+### POST /api/register
+```json
+{
+  "method": "POST",
+  "path": "/api/register",
+  "pathParams": {},
+  "query": {},
+  "body": {
+    "imie": "Jan",
+    "nazwisko": "Kowalski",
+    "nrIndeksu": "12345",
+    "email": "jan.kowalski@example.com",
+    "stacjonarny": true,
+    "password": "haslo123"
+  }
+}
+```
 
 ### GET /api/studenci/{studentId}
 ```json
@@ -134,6 +159,7 @@ Data i godzina: 2026-02-07 19:45:46 CET
 ```
 
 ### POST /api/studenci
+Nota: pole `password` jest ignorowane w backendzie dla tego endpointu.
 ```json
 {
   "method": "POST",

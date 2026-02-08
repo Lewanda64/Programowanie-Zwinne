@@ -51,6 +51,22 @@ public class StudentController {
         return ResponseEntity.created(location).build();
     }
 
+    // POST http://localhost:8080/api/register
+    @PostMapping("/register")
+    public ResponseEntity<Void> register(@Valid @RequestBody RegisterRequest request) {
+        Student student = new Student(request.getImie(), request.getNazwisko(),
+                request.getNrIndeksu(), request.getEmail(), request.getStacjonarny());
+        Student created = studentService.registerStudent(student, request.getPassword());
+
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentContextPath()
+                .path("/api/studenci/{studentId}")
+                .buildAndExpand(created.getStudentId())
+                .toUri();
+
+        return ResponseEntity.created(location).build();
+    }
+
     // PUT http://localhost:8080/api/studenci/1
     @PutMapping("/studenci/{studentId}")
     public ResponseEntity<Void> updateStudent(@Valid @RequestBody Student student,

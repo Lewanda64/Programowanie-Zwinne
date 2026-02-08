@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.project.model.Student;
 public interface StudentRepository extends JpaRepository<Student, Integer> {
  Optional<Student> findByNrIndeksu(String nrIndeksu);
+ Optional<Student> findByEmailIgnoreCase(String email);
  Page<Student> findByNrIndeksuStartsWith(String nrIndeksu, Pageable pageable);
  Page<Student> findByEmailStartsWithIgnoreCase(String email, Pageable pageable);
  Page<Student> findByImieStartsWithIgnoreCase(String imie, Pageable pageable);

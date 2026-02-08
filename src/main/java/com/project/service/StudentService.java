@@ -15,6 +15,8 @@ public interface StudentService {
 
     Student updateStudent(Student student);
 
+    Student registerStudent(Student student, String rawPassword);
+
     void deleteStudent(Integer studentId);
 
     Page<Student> getStudenci(Pageable pageable);

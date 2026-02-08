@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.project.model.Student;
 import com.project.repository.StudentRepository;
@@ -14,10 +15,12 @@ import com.project.repository.StudentRepository;
 public class StudentServiceImpl implements StudentService {
 
     private final StudentRepository studentRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
-    public StudentServiceImpl(StudentRepository studentRepository) {
+    public StudentServiceImpl(StudentRepository studentRepository, PasswordEncoder passwordEncoder) {
         this.studentRepository = studentRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
@@ -29,6 +32,10 @@ public class StudentServiceImpl implements StudentService {
     public Student createStudent(Student student) {
         if (student.getStudentId() != null) {
             throw new IllegalArgumentException("Nowy student nie powinien miec ustawionego ID");
+        }
+        student.setPassword(null);
+        if (student.getRole() == null || student.getRole().isBlank()) {
+            student.setRole("ROLE_USER");
         }
         return studentRepository.save(student);
     }
@@ -53,6 +60,16 @@ public class StudentServiceImpl implements StudentService {
         existing.setProjekty(student.getProjekty());
 
         return studentRepository.save(existing);
+    }
+
+    @Override
+    public Student registerStudent(Student student, String rawPassword) {
+        if (student.getStudentId() != null) {
+            throw new IllegalArgumentException("Rejestracja nie powinna zawierac ID");
+        }
+        student.setRole("ROLE_USER");
+        student.setPassword(passwordEncoder.encode(rawPassword));
+        return studentRepository.save(student);
     }
 
     @Override
