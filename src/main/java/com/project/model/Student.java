@@ -9,6 +9,7 @@ import jakarta.persistence.Index;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
@@ -50,8 +51,10 @@ public class Student {
     @Column(name = "nr_indeksu", nullable = false, length = 20, unique = true)
     private String nrIndeksu;
 
-    @Size(max = 50)
-    @Column(length = 50, unique = true)
+    @NotBlank
+    @Email
+    @Size(max = 254)
+    @Column(length = 254, unique = true, nullable = false)
     private String email;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)

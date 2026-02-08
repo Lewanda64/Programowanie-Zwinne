@@ -1,11 +1,11 @@
 # EndPoints Snapshot
 
-Data i godzina: 2026-02-08 19:46:39 CET
+Data i godzina: 2026-02-08 21:32:45 CET
 
 ## Informacje ogolne
 - Bazowa sciezka: `/api`
 - Zrodlo: kontrolery REST w `src/main/java/com/project/controller`
- - Sortowanie: backend akceptuje `sort` z nazwami pol encji (np. `dataczasUtworzenia`); alias `dataCzasUtworzenia` jest mapowany na `dataczasUtworzenia`.
+ - Sortowanie: backend akceptuje `sort` z nazwami pol encji (np. `dataczasUtworzenia`, `dataczasDodania`); aliasy `dataCzasUtworzenia` i `dataCzasDodania` sa mapowane na poprawne pola.
 
 ### Format odpowiedzi bledow (globalny)
 Backend zwraca spójny JSON dla bledow (np. 400/404):
@@ -143,6 +143,7 @@ Backend zwraca spójny JSON dla bledow (np. 400/404):
 | GET | `/api/studenci/nrIndeksu/{nrIndeksu}` | Pobranie studenta po numerze indeksu |
 
 Nota: pole `projekty` w payloadach `POST /api/studenci` i `PUT /api/studenci/{studentId}` ustawia relacje w tabeli `projekt_student`. Przekazuj `projektId`; brak projektu zwraca 404, a pusta lista usuwa wszystkie powiazania.
+Nota: pole `email` ma limit 254 znaki i jest walidowane przez `@Email`.
 
 ### POST /api/register
 ```json

@@ -684,3 +684,319 @@ org.springframework.data.mapping.PropertyReferenceException: No property 'dataCz
 2026-02-08 20:20:58.202 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-02-08 20:20:58.203 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
 2026-02-08 20:20:58.205 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-02-08 21:21:05.668 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-02-08 21:21:05.706 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Starting ProjectRestApiApplicationTests using Java 21.0.10 with PID 2762676 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-08 21:21:05.707 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-02-08 21:21:06.247 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-08 21:21:06.306 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 3 JPA repository interfaces.
+2026-02-08 21:21:07.181 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-08 21:21:07.244 INFO  [Test worker] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2026-02-08 21:21:07.278 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-08 21:21:07.514 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-08 21:21:07.551 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-08 21:21:07.723 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-02-08 21:21:07.725 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-08 21:21:07.746 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-08 21:21:07.768 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-08 21:21:08.615 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-08 21:21:08.669 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:21:08.896 INFO  [Test worker] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-08 21:21:09.692 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-08 21:21:09.724 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-08 21:21:10.412 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Started ProjectRestApiApplicationTests in 5.061 seconds (process running for 6.006)
+2026-02-08 21:21:10.893 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Starting ProjektDeleteIntegrationTest using Java 21.0.10 with PID 2762676 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-08 21:21:10.893 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-08 21:21:11.042 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-08 21:21:11.049 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2026-02-08 21:21:11.186 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-08 21:21:11.188 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-08 21:21:11.196 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-08 21:21:11.197 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-02-08 21:21:11.198 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-02-08 21:21:11.198 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-02-08 21:21:11.199 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-08 21:21:11.199 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-08 21:21:11.283 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-08 21:21:11.295 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:21:11.397 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-08 21:21:11.402 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-08 21:21:11.589 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-02-08 21:21:11.590 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-02-08 21:21:11.591 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-02-08 21:21:11.601 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Started ProjektDeleteIntegrationTest in 0.733 seconds (process running for 7.194)
+2026-02-08 21:21:12.385 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Starting RelacjaDeleteIntegrationTest using Java 21.0.10 with PID 2762676 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-08 21:21:12.385 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-08 21:21:12.500 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-08 21:21:12.506 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
+2026-02-08 21:21:12.623 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-08 21:21:12.625 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-08 21:21:12.633 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-08 21:21:12.633 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2026-02-08 21:21:12.635 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2026-02-08 21:21:12.635 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2026-02-08 21:21:12.635 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-08 21:21:12.636 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-08 21:21:12.734 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-08 21:21:12.748 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:21:12.826 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-08 21:21:12.831 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-08 21:21:12.955 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-02-08 21:21:12.955 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-02-08 21:21:12.956 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-02-08 21:21:12.963 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Started RelacjaDeleteIntegrationTest in 0.593 seconds (process running for 8.557)
+2026-02-08 21:21:13.522 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:21:13.527 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-08 21:21:13.528 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-08 21:21:13.531 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:21:13.532 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-02-08 21:21:13.533 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-02-08 21:21:13.535 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:21:13.536 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2026-02-08 21:21:13.538 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2026-02-08 21:26:03.076 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-02-08 21:26:03.114 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Starting ProjectRestApiApplicationTests using Java 21.0.10 with PID 2786330 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-08 21:26:03.115 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-02-08 21:26:03.652 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-08 21:26:03.694 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2026-02-08 21:26:04.503 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-08 21:26:04.565 INFO  [Test worker] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2026-02-08 21:26:04.597 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-08 21:26:04.838 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-08 21:26:04.866 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-08 21:26:05.076 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-02-08 21:26:05.078 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-08 21:26:05.108 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-08 21:26:05.137 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-08 21:26:06.093 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-08 21:26:06.153 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:26:06.444 INFO  [Test worker] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-08 21:26:07.371 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-08 21:26:07.399 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-08 21:26:08.203 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Started ProjectRestApiApplicationTests in 5.482 seconds (process running for 6.442)
+2026-02-08 21:26:08.658 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Starting ProjektDeleteIntegrationTest using Java 21.0.10 with PID 2786330 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-08 21:26:08.658 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-08 21:26:08.824 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-08 21:26:08.830 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
+2026-02-08 21:26:08.991 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-08 21:26:08.995 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-08 21:26:09.006 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-08 21:26:09.007 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-02-08 21:26:09.008 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-02-08 21:26:09.009 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-02-08 21:26:09.009 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-08 21:26:09.010 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-08 21:26:09.111 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-08 21:26:09.122 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:26:09.228 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-08 21:26:09.234 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-08 21:26:09.458 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-02-08 21:26:09.459 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-02-08 21:26:09.460 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-02-08 21:26:09.473 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Started ProjektDeleteIntegrationTest in 0.839 seconds (process running for 7.712)
+2026-02-08 21:26:10.308 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Starting RelacjaDeleteIntegrationTest using Java 21.0.10 with PID 2786330 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-08 21:26:10.309 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-08 21:26:10.435 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-08 21:26:10.441 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
+2026-02-08 21:26:10.555 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-08 21:26:10.557 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-08 21:26:10.570 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-08 21:26:10.572 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2026-02-08 21:26:10.573 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2026-02-08 21:26:10.574 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2026-02-08 21:26:10.574 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-08 21:26:10.575 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-08 21:26:10.664 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-08 21:26:10.675 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:26:10.763 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-08 21:26:10.771 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-08 21:26:10.914 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-02-08 21:26:10.914 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-02-08 21:26:10.915 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-02-08 21:26:10.924 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Started RelacjaDeleteIntegrationTest in 0.632 seconds (process running for 9.163)
+2026-02-08 21:26:11.444 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:26:11.447 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-08 21:26:11.449 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-08 21:26:11.452 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:26:11.453 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-02-08 21:26:11.453 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-02-08 21:26:11.455 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:26:11.456 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2026-02-08 21:26:11.456 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2026-02-08 21:35:39.201 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-02-08 21:35:39.233 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Starting ProjectRestApiApplicationTests using Java 21.0.10 with PID 2832396 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-08 21:35:39.234 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-02-08 21:35:39.836 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-08 21:35:39.889 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
+2026-02-08 21:35:40.703 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-08 21:35:40.755 INFO  [Test worker] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2026-02-08 21:35:40.786 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-08 21:35:41.036 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-08 21:35:41.065 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-08 21:35:41.239 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-02-08 21:35:41.241 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-08 21:35:41.265 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-08 21:35:41.287 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-08 21:35:42.193 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-08 21:35:42.244 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:35:42.495 INFO  [Test worker] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-08 21:35:43.420 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-08 21:35:43.458 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-08 21:35:44.190 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Started ProjectRestApiApplicationTests in 5.29 seconds (process running for 6.321)
+2026-02-08 21:35:44.685 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Starting ProjektDeleteIntegrationTest using Java 21.0.10 with PID 2832396 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-08 21:35:44.686 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-08 21:35:44.859 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-08 21:35:44.868 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2026-02-08 21:35:45.044 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-08 21:35:45.046 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-08 21:35:45.054 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-08 21:35:45.055 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-02-08 21:35:45.057 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-02-08 21:35:45.057 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-02-08 21:35:45.057 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-08 21:35:45.058 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-08 21:35:45.145 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-08 21:35:45.157 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:35:45.248 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-08 21:35:45.256 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-08 21:35:45.438 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-02-08 21:35:45.438 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-02-08 21:35:45.439 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-02-08 21:35:45.451 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Started ProjektDeleteIntegrationTest in 0.797 seconds (process running for 7.582)
+2026-02-08 21:35:46.273 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Starting RelacjaDeleteIntegrationTest using Java 21.0.10 with PID 2832396 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-08 21:35:46.273 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-08 21:35:46.406 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-08 21:35:46.413 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2026-02-08 21:35:46.528 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-08 21:35:46.530 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-08 21:35:46.542 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-08 21:35:46.544 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2026-02-08 21:35:46.545 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2026-02-08 21:35:46.546 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2026-02-08 21:35:46.546 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-08 21:35:46.547 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-08 21:35:46.646 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-08 21:35:46.658 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:35:46.755 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-08 21:35:46.762 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-08 21:35:46.879 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-02-08 21:35:46.880 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-02-08 21:35:46.880 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-02-08 21:35:46.891 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Started RelacjaDeleteIntegrationTest in 0.635 seconds (process running for 9.022)
+2026-02-08 21:35:47.512 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:35:47.516 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-08 21:35:47.518 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-08 21:35:47.522 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:35:47.523 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-02-08 21:35:47.524 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-02-08 21:35:47.527 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:35:47.528 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2026-02-08 21:35:47.529 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2026-02-08 21:36:06.672 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-02-08 21:36:06.715 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - Starting ProjectRestApiApplication using Java 21.0.10 with PID 2835242 (/home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne/build/classes/java/main started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-08 21:36:06.716 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - The following 1 profile is active: "dev"
+2026-02-08 21:36:06.761 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-08 21:36:06.761 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-08 21:36:07.256 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-08 21:36:07.295 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+2026-02-08 21:36:08.134 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-02-08 21:36:08.145 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-02-08 21:36:08.146 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-08 21:36:08.146 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-02-08 21:36:08.182 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-08 21:36:08.182 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1421 ms
+2026-02-08 21:36:08.325 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-08 21:36:08.366 INFO  [restartedMain] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2026-02-08 21:36:08.394 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-08 21:36:08.609 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-08 21:36:08.632 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-08 21:36:08.742 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@185897ab
+2026-02-08 21:36:08.743 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-08 21:36:08.765 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-08 21:36:08.778 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-08 21:36:09.578 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-08 21:36:10.387 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 21:36:10.576 INFO  [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-08 21:36:11.154 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-08 21:36:11.177 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-08 21:36:11.615 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-08 21:36:11.634 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-02-08 21:36:11.644 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-02-08 21:36:11.653 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - Started ProjectRestApiApplication in 5.398 seconds (process running for 5.949)
+2026-02-08 21:36:53.000 INFO  [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-08 21:36:53.000 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-08 21:36:53.001 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-02-08 22:06:57.401 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-08 22:06:57.403 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-08 22:06:57.408 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08 22:06:57.411 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-08 22:06:57.414 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

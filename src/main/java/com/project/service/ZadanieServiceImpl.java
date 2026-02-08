@@ -5,20 +5,26 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.project.error.NotFoundException;
+import com.project.model.Projekt;
 import com.project.model.Zadanie;
+import com.project.repository.ProjektRepository;
 import com.project.repository.ZadanieRepository;
 
 @Service
 public class ZadanieServiceImpl implements ZadanieService {
 
     private final ZadanieRepository zadanieRepository;
+    private final ProjektRepository projektRepository;
 
     @Autowired
-    public ZadanieServiceImpl(ZadanieRepository zadanieRepository) {
+    public ZadanieServiceImpl(ZadanieRepository zadanieRepository, ProjektRepository projektRepository) {
         this.zadanieRepository = zadanieRepository;
+        this.projektRepository = projektRepository;
     }
 
     @Override
@@ -33,6 +39,14 @@ public class ZadanieServiceImpl implements ZadanieService {
         if (zadanie.getZadanieId() != null) {
             throw new IllegalArgumentException("Nowe zadanie nie powinno miec ustawionego ID");
         }
+        Projekt projekt = zadanie.getProjekt();
+        if (projekt == null || projekt.getProjektId() == null) {
+            throw new IllegalArgumentException("Projekt jest wymagany");
+        }
+        Projekt existingProjekt = projektRepository.findById(projekt.getProjektId())
+                .orElseThrow(() -> new NotFoundException(
+                        "Projekt o id=" + projekt.getProjektId() + " nie istnieje"));
+        zadanie.setProjekt(existingProjekt);
         return zadanieRepository.save(zadanie);
     }
 
@@ -61,11 +75,31 @@ public class ZadanieServiceImpl implements ZadanieService {
 
     @Override
     public Page<Zadanie> getZadania(Pageable pageable) {
-        return zadanieRepository.findAll(pageable);
+        return zadanieRepository.findAll(normalizeSort(pageable));
     }
 
     @Override
     public Page<Zadanie> getZadaniaProjektu(Integer projektId, Pageable pageable) {
-        return zadanieRepository.findZadaniaProjektu(projektId, pageable);
+        return zadanieRepository.findZadaniaProjektu(projektId, normalizeSort(pageable));
+    }
+
+    private Pageable normalizeSort(Pageable pageable) {
+        if (pageable == null || pageable.getSort().isUnsorted()) {
+            return pageable;
+        }
+        boolean changed = false;
+        java.util.List<Sort.Order> orders = new java.util.ArrayList<>();
+        for (Sort.Order order : pageable.getSort()) {
+            if ("dataCzasDodania".equals(order.getProperty())) {
+                orders.add(new Sort.Order(order.getDirection(), "dataczasDodania"));
+                changed = true;
+            } else {
+                orders.add(order);
+            }
+        }
+        if (!changed) {
+            return pageable;
+        }
+        return PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), Sort.by(orders));
     }
 }

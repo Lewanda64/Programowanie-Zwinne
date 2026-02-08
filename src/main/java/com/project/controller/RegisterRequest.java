@@ -20,7 +20,7 @@ public class RegisterRequest {
     private String nrIndeksu;
 
     @NotBlank
-    @Size(max = 50)
+    @Size(max = 254)
     @Email
     private String email;
 
