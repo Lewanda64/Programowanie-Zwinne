@@ -5,6 +5,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -60,6 +62,7 @@ public class ProjektServiceImpl implements ProjektService {
     @Transactional
     public void deleteProjekt(Integer projektId) {
         zadanieRepository.deleteByProjektProjektId(projektId);
+        projektRepository.deleteProjektStudentRelationsByProjektId(projektId);
         projektRepository.findById(projektId).ifPresent(projekt -> {
             for (Student student : new java.util.HashSet<>(projekt.getStudenci())) {
                 projekt.removeStudent(student);
@@ -71,14 +74,34 @@ public class ProjektServiceImpl implements ProjektService {
 
     @Override
     public Page<Projekt> getProjekty(Pageable pageable) {
-        return projektRepository.findAll(pageable);
+        return projektRepository.findAll(normalizeSort(pageable));
     }
 
     @Override
     public Page<Projekt> searchByNazwa(String nazwa, Pageable pageable) {
         if (nazwa == null || nazwa.isBlank()) {
-            return projektRepository.findAll(pageable);
+            return projektRepository.findAll(normalizeSort(pageable));
         }
-        return projektRepository.findByNazwaContainingIgnoreCase(nazwa, pageable);
+        return projektRepository.findByNazwaContainingIgnoreCase(nazwa, normalizeSort(pageable));
+    }
+
+    private Pageable normalizeSort(Pageable pageable) {
+        if (pageable == null || pageable.getSort().isUnsorted()) {
+            return pageable;
+        }
+        boolean changed = false;
+        java.util.List<Sort.Order> orders = new java.util.ArrayList<>();
+        for (Sort.Order order : pageable.getSort()) {
+            if ("dataCzasUtworzenia".equals(order.getProperty())) {
+                orders.add(new Sort.Order(order.getDirection(), "dataczasUtworzenia"));
+                changed = true;
+            } else {
+                orders.add(order);
+            }
+        }
+        if (!changed) {
+            return pageable;
+        }
+        return PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), Sort.by(orders));
     }
 }

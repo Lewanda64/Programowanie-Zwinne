@@ -154,6 +154,7 @@ public class StudentServiceImpl implements StudentService {
     @Transactional
     public void deleteStudent(Integer studentId) {
         studentRepository.findById(studentId).ifPresent(student -> {
+            studentRepository.deleteProjektStudentRelationsByStudentId(studentId);
             Set<Projekt> projekty = new HashSet<>(student.getProjekty());
             for (Projekt projekt : projekty) {
                 projekt.removeStudent(student);

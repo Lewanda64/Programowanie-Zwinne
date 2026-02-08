@@ -13,6 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.http.HttpMethod;
 
 @Configuration
 public class SecurityConfig {
@@ -63,7 +64,14 @@ public class SecurityConfig {
                         .requestMatchers("/api/register").permitAll()
                         .requestMatchers("/api/studenci/me").hasAnyRole("USER", "ADMIN")
                         .requestMatchers("/api/studenci/**").hasRole("ADMIN")
-                        .requestMatchers("/api/projekty/**", "/api/zadania/**").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/api/projekty/**").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/api/zadania/**").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/api/projekty/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/api/projekty/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/api/projekty/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/api/zadania/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/api/zadania/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/api/zadania/**").hasRole("ADMIN")
                         .requestMatchers("/api/**").authenticated()
                         .anyRequest().permitAll()
                 )

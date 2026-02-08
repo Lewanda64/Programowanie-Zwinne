@@ -30,3 +30,8 @@
 - `./gradlew build --info` - wiecej logow
 - `./gradlew build --stacktrace` - pelny stacktrace przy bledach
 - `./gradlew build -x test` - build bez testow
+
+## Swagger / OpenAPI
+- Swagger UI: `http://localhost:8081/swagger-ui/index.html`
+- OpenAPI JSON: `http://localhost:8081/v3/api-docs`
+- Autoryzacja: Basic Auth (np. `admin/admin` lub dane studenta z bazy). Kliknij "Authorize" w Swagger UI.

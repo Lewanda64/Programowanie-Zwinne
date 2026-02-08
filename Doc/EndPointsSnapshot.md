@@ -1,10 +1,11 @@
 # EndPoints Snapshot
 
-Data i godzina: 2026-02-08 18:53:29 CET
+Data i godzina: 2026-02-08 19:46:39 CET
 
 ## Informacje ogolne
 - Bazowa sciezka: `/api`
 - Zrodlo: kontrolery REST w `src/main/java/com/project/controller`
+ - Sortowanie: backend akceptuje `sort` z nazwami pol encji (np. `dataczasUtworzenia`); alias `dataCzasUtworzenia` jest mapowany na `dataczasUtworzenia`.
 
 ### Format odpowiedzi bledow (globalny)
 Backend zwraca spójny JSON dla bledow (np. 400/404):
