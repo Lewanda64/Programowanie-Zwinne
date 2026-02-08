@@ -34,7 +34,11 @@ public class StudentServiceImpl implements StudentService {
         if (student.getStudentId() != null) {
             throw new IllegalArgumentException("Nowy student nie powinien miec ustawionego ID");
         }
-        student.setPassword(null);
+        String rawPassword = student.getPassword();
+        if (rawPassword == null || rawPassword.isBlank()) {
+            throw new IllegalArgumentException("Haslo jest wymagane");
+        }
+        student.setPassword(passwordEncoder.encode(rawPassword));
         if (student.getRole() == null || student.getRole().isBlank()) {
             student.setRole("ROLE_USER");
         }
@@ -59,6 +63,11 @@ public class StudentServiceImpl implements StudentService {
 
         // relacja many-to-many (jeśli przesyłasz ją w JSON i chcesz ją nadpisywać)
         existing.setProjekty(student.getProjekty());
+
+        String rawPassword = student.getPassword();
+        if (rawPassword != null && !rawPassword.isBlank()) {
+            existing.setPassword(passwordEncoder.encode(rawPassword));
+        }
 
         return studentRepository.save(existing);
     }

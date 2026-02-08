@@ -35,8 +35,8 @@ private Integer projektId;
 @Column(nullable = false, length = 50)
 private String nazwa;
 
-@Size(max = 1000, message = "Opis może mieć maksymalnie {max} znaków!")
-@Column(length = 1000)
+@Size(max = 4444, message = "Opis może mieć maksymalnie {max} znaków!")
+@Column(length = 4444)
 private String opis;
 
 @CreatedDate

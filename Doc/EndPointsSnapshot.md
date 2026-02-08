@@ -1,10 +1,28 @@
 # EndPoints Snapshot
 
-Data i godzina: 2026-02-08 01:11:07 CET
+Data i godzina: 2026-02-08 16:16:12 CET
 
 ## Informacje ogolne
 - Bazowa sciezka: `/api`
 - Zrodlo: kontrolery REST w `src/main/java/com/project/controller`
+
+### Format odpowiedzi bledow (globalny)
+Backend zwraca spójny JSON dla bledow (np. 400/404):
+```json
+{
+  "timestamp": "2026-02-08T14:58:12.123Z",
+  "status": 400,
+  "error": "Bad Request",
+  "message": "Validation failed",
+  "path": "/api/projekty",
+  "fieldErrors": [
+    {
+      "field": "nazwa",
+      "message": "Pole nazwa nie moze byc puste!"
+    }
+  ]
+}
+```
 
 ## Projekt
 
@@ -184,7 +202,6 @@ Data i godzina: 2026-02-08 01:11:07 CET
 ```
 
 ### POST /api/studenci
-Nota: pole `password` jest ignorowane w backendzie dla tego endpointu.
 ```json
 {
   "method": "POST",
@@ -196,6 +213,7 @@ Nota: pole `password` jest ignorowane w backendzie dla tego endpointu.
     "nazwisko": "Kowalski",
     "nrIndeksu": "12345",
     "email": "jan.kowalski@example.com",
+    "password": "haslo123",
     "stacjonarny": true,
     "projekty": [
       {
@@ -220,6 +238,7 @@ Nota: pole `password` jest ignorowane w backendzie dla tego endpointu.
     "nazwisko": "Kowalski",
     "nrIndeksu": "12345",
     "email": "jan.kowalski@example.com",
+    "password": "noweHaslo",
     "stacjonarny": false,
     "projekty": [
       {
