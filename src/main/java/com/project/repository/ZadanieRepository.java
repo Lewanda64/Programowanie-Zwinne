@@ -11,4 +11,5 @@ public interface ZadanieRepository extends JpaRepository<Zadanie, Integer> {
  Page<Zadanie> findZadaniaProjektu(@Param("projektId") Integer projektId, Pageable pageable);
  @Query("SELECT z FROM Zadanie z WHERE z.projekt.projektId = :projektId")
  List<Zadanie> findZadaniaProjektu(@Param("projektId") Integer projektId);
+ void deleteByProjektProjektId(Integer projektId);
 }
