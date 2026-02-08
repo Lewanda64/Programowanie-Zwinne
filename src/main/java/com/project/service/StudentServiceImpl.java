@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import com.project.error.NotFoundException;
 import com.project.model.Student;
 import com.project.repository.StudentRepository;
 
@@ -47,7 +48,7 @@ public class StudentServiceImpl implements StudentService {
         }
 
         Student existing = studentRepository.findById(student.getStudentId())
-                .orElseThrow(() -> new IllegalArgumentException(
+                .orElseThrow(() -> new NotFoundException(
                         "Student o id=" + student.getStudentId() + " nie istnieje"));
 
         existing.setImie(student.getImie());

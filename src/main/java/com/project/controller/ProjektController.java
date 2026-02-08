@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import com.project.error.NotFoundException;
 import com.project.model.Projekt;
 import com.project.service.ProjektService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -36,7 +37,8 @@ public class ProjektController {
  //Przykład żądania wywołującego metodę: GET http://localhost:8080/api/projekty/1
  @GetMapping("/projekty/{projektId}")
  ResponseEntity<Projekt> getProjekt(@PathVariable("projektId") Integer projektId){// @PathVariable oznacza,
- return ResponseEntity.of(projektService.getProjekt(projektId)); // że wartość parametru
+ return ResponseEntity.ok(projektService.getProjekt(projektId)
+         .orElseThrow(() -> new NotFoundException("Projekt o id=" + projektId + " nie istnieje"))); // że wartość parametru
  } // przekazywana jest w ścieżce
  // @Valid włącza automatyczną walidację na podstawie adnotacji zawartych 
  // w modelu np. NotNull, Size, NotEmpty itd. (z jakarta.validation.constraints.*)
@@ -51,20 +53,18 @@ public class ProjektController {
  @PutMapping("/projekty/{projektId}")
  public ResponseEntity<Void> updateProjekt(@Valid @RequestBody Projekt projekt,
 @PathVariable("projektId") Integer projektId) {
- return projektService.getProjekt(projektId)
- .map(p -> {
+ projektService.getProjekt(projektId)
+         .orElseThrow(() -> new NotFoundException("Projekt o id=" + projektId + " nie istnieje"));
  projekt.setProjektId(projektId);
  projektService.updateProjekt(projekt);
  return new ResponseEntity<Void>(HttpStatus.OK); // 200 (można też zwracać 204 - No content)
- }) 
- .orElseGet(() -> ResponseEntity.notFound().build()); // 404 - Not found
  }
  @DeleteMapping("/projekty/{projektId}")
  public ResponseEntity<Void> deleteProjekt(@PathVariable("projektId") Integer projektId) {
- return projektService.getProjekt(projektId).map(p -> {
+ projektService.getProjekt(projektId)
+         .orElseThrow(() -> new NotFoundException("Projekt o id=" + projektId + " nie istnieje"));
  projektService.deleteProjekt(projektId);
  return new ResponseEntity<Void>(HttpStatus.OK); // 200
- }).orElseGet(() -> ResponseEntity.notFound().build()); // 404 - Not found
  }
  //Przykład żądania wywołującego metodę: http://localhost:8080/api/projekty?page=0&size=10&sort=nazwa,desc
  @GetMapping(value = "/projekty")

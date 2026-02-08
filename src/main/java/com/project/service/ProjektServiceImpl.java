@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.project.error.NotFoundException;
 import com.project.model.Projekt;
 import com.project.repository.ProjektRepository;
 import com.project.repository.ZadanieRepository;
@@ -44,7 +45,7 @@ public class ProjektServiceImpl implements ProjektService {
         }
 
         Projekt existing = projektRepository.findById(projekt.getProjektId())
-                .orElseThrow(() -> new IllegalArgumentException(
+                .orElseThrow(() -> new NotFoundException(
                         "Projekt o id=" + projekt.getProjektId() + " nie istnieje"));
 
         existing.setNazwa(projekt.getNazwa());

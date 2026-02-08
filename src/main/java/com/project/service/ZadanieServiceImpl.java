@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import com.project.error.NotFoundException;
 import com.project.model.Zadanie;
 import com.project.repository.ZadanieRepository;
 
@@ -42,7 +43,7 @@ public class ZadanieServiceImpl implements ZadanieService {
         }
 
         Zadanie existing = zadanieRepository.findById(zadanie.getZadanieId())
-                .orElseThrow(() -> new IllegalArgumentException(
+                .orElseThrow(() -> new NotFoundException(
                         "Zadanie o id=" + zadanie.getZadanieId() + " nie istnieje"));
 
         existing.setNazwa(zadanie.getNazwa());

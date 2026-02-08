@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.project.error.NotFoundException;
 import com.project.model.Zadanie;
 import com.project.service.ZadanieService;
 
@@ -33,7 +34,8 @@ public class ZadanieController {
     // GET http://localhost:8080/api/zadania/1
     @GetMapping("/zadania/{zadanieId}")
     public ResponseEntity<Zadanie> getZadanie(@PathVariable("zadanieId") Integer zadanieId) {
-        return ResponseEntity.of(zadanieService.getZadanie(zadanieId));
+        return ResponseEntity.ok(zadanieService.getZadanie(zadanieId)
+                .orElseThrow(() -> new NotFoundException("Zadanie o id=" + zadanieId + " nie istnieje")));
     }
 
     // POST http://localhost:8080/api/zadania
@@ -55,25 +57,21 @@ public class ZadanieController {
     public ResponseEntity<Void> updateZadanie(@Valid @RequestBody Zadanie zadanie,
                                               @PathVariable("zadanieId") Integer zadanieId) {
 
-        return zadanieService.getZadanie(zadanieId)
-                .map(z -> {
-                    zadanie.setZadanieId(zadanieId); // ważne
-                    zadanieService.updateZadanie(zadanie);
-                    return new ResponseEntity<Void>(HttpStatus.OK);
-                })
-                .orElseGet(() -> ResponseEntity.notFound().build());
+        zadanieService.getZadanie(zadanieId)
+                .orElseThrow(() -> new NotFoundException("Zadanie o id=" + zadanieId + " nie istnieje"));
+        zadanie.setZadanieId(zadanieId); // ważne
+        zadanieService.updateZadanie(zadanie);
+        return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
     // DELETE http://localhost:8080/api/zadania/1
     @DeleteMapping("/zadania/{zadanieId}")
     public ResponseEntity<Void> deleteZadanie(@PathVariable("zadanieId") Integer zadanieId) {
 
-        return zadanieService.getZadanie(zadanieId)
-                .map(z -> {
-                    zadanieService.deleteZadanie(zadanieId);
-                    return new ResponseEntity<Void>(HttpStatus.OK);
-                })
-                .orElseGet(() -> ResponseEntity.notFound().build());
+        zadanieService.getZadanie(zadanieId)
+                .orElseThrow(() -> new NotFoundException("Zadanie o id=" + zadanieId + " nie istnieje"));
+        zadanieService.deleteZadanie(zadanieId);
+        return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
     // GET http://localhost:8080/api/zadania?page=0&size=10&sort=nazwa,asc

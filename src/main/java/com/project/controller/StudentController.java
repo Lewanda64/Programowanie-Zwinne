@@ -15,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.project.error.NotFoundException;
 import com.project.model.Student;
 import com.project.service.StudentService;
 
@@ -35,7 +36,8 @@ public class StudentController {
     // GET http://localhost:8080/api/studenci/1
     @GetMapping("/studenci/{studentId}")
     public ResponseEntity<Student> getStudent(@PathVariable("studentId") Integer studentId) {
-        return ResponseEntity.of(studentService.getStudent(studentId));
+        return ResponseEntity.ok(studentService.getStudent(studentId)
+                .orElseThrow(() -> new NotFoundException("Student o id=" + studentId + " nie istnieje")));
     }
 
     // POST http://localhost:8080/api/studenci
@@ -71,7 +73,8 @@ public class StudentController {
     // GET http://localhost:8080/api/studenci/me
     @GetMapping("/studenci/me")
     public ResponseEntity<Student> getMe(Principal principal) {
-        return ResponseEntity.of(studentService.getByEmail(principal.getName()));
+        return ResponseEntity.ok(studentService.getByEmail(principal.getName())
+                .orElseThrow(() -> new NotFoundException("Student o email=" + principal.getName() + " nie istnieje")));
     }
 
     // PUT http://localhost:8080/api/studenci/me
@@ -79,7 +82,7 @@ public class StudentController {
     public ResponseEntity<Student> updateMe(@Valid @RequestBody Student student, Principal principal) {
         return studentService.updateSelf(principal.getName(), student)
                 .map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.notFound().build());
+                .orElseThrow(() -> new NotFoundException("Student o email=" + principal.getName() + " nie istnieje"));
     }
 
     // PUT http://localhost:8080/api/studenci/1
@@ -87,25 +90,21 @@ public class StudentController {
     public ResponseEntity<Void> updateStudent(@Valid @RequestBody Student student,
                                               @PathVariable("studentId") Integer studentId) {
 
-        return studentService.getStudent(studentId)
-                .map(s -> {
-                    student.setStudentId(studentId); // ważne
-                    studentService.updateStudent(student);
-                    return new ResponseEntity<Void>(HttpStatus.OK);
-                })
-                .orElseGet(() -> ResponseEntity.notFound().build());
+        studentService.getStudent(studentId)
+                .orElseThrow(() -> new NotFoundException("Student o id=" + studentId + " nie istnieje"));
+        student.setStudentId(studentId); // ważne
+        studentService.updateStudent(student);
+        return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
     // DELETE http://localhost:8080/api/studenci/1
     @DeleteMapping("/studenci/{studentId}")
     public ResponseEntity<Void> deleteStudent(@PathVariable("studentId") Integer studentId) {
 
-        return studentService.getStudent(studentId)
-                .map(s -> {
-                    studentService.deleteStudent(studentId);
-                    return new ResponseEntity<Void>(HttpStatus.OK);
-                })
-                .orElseGet(() -> ResponseEntity.notFound().build());
+        studentService.getStudent(studentId)
+                .orElseThrow(() -> new NotFoundException("Student o id=" + studentId + " nie istnieje"));
+        studentService.deleteStudent(studentId);
+        return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
     // GET http://localhost:8080/api/studenci?page=0&size=10
@@ -138,6 +137,7 @@ public class StudentController {
     // (opcjonalnie) GET http://localhost:8080/api/studenci/nrIndeksu/12345
     @GetMapping("/studenci/nrIndeksu/{nrIndeksu}")
     public ResponseEntity<Student> getStudentByNrIndeksu(@PathVariable("nrIndeksu") String nrIndeksu) {
-        return ResponseEntity.of(studentService.getByNrIndeksu(nrIndeksu));
+        return ResponseEntity.ok(studentService.getByNrIndeksu(nrIndeksu)
+                .orElseThrow(() -> new NotFoundException("Student o nrIndeksu=" + nrIndeksu + " nie istnieje")));
     }
 }
