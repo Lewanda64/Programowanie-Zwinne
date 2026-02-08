@@ -1,16 +1,10 @@
 # EndPoints Snapshot
 
-Data i godzina: 2026-02-07 23:57:26 CET
+Data i godzina: 2026-02-08 01:11:07 CET
 
 ## Informacje ogolne
 - Bazowa sciezka: `/api`
 - Zrodlo: kontrolery REST w `src/main/java/com/project/controller`
-
-## Role i dostep
-- `/api/register` jest publiczne (permitAll) i sluzy do samorejestracji (rola USER).
-- `/api/studenci/**` jest tylko dla ADMIN.
-- `/api/projekty/**` i `/api/zadania/**` sa dostepne dla USER i ADMIN.
-- `POST /api/register` moze zwracac naglowek `Location` wskazujacy `/api/studenci/{id}`; ten endpoint jest ADMIN-only, wiec zwykly USER dostanie 403 przy follow-up.
 
 ## Projekt
 
@@ -117,6 +111,8 @@ Data i godzina: 2026-02-07 23:57:26 CET
 | Metoda | Sciezka | Opis |
 | --- | --- | --- |
 | POST | `/api/register` | Rejestracja studenta (publiczna) |
+| GET | `/api/studenci/me` | Pobranie profilu zalogowanego studenta |
+| PUT | `/api/studenci/me` | Aktualizacja profilu zalogowanego studenta |
 | GET | `/api/studenci/{studentId}` | Pobranie studenta po ID |
 | POST | `/api/studenci` | Utworzenie studenta (admin) |
 | PUT | `/api/studenci/{studentId}` | Aktualizacja studenta |
@@ -141,6 +137,35 @@ Data i godzina: 2026-02-07 23:57:26 CET
     "email": "jan.kowalski@example.com",
     "stacjonarny": true,
     "password": "haslo123"
+  }
+}
+```
+
+### GET /api/studenci/me
+```json
+{
+  "method": "GET",
+  "path": "/api/studenci/me",
+  "pathParams": {},
+  "query": {},
+  "body": null
+}
+```
+
+### PUT /api/studenci/me
+```json
+{
+  "method": "PUT",
+  "path": "/api/studenci/me",
+  "pathParams": {},
+  "query": {},
+  "body": {
+    "imie": "Jan",
+    "nazwisko": "Kowalski",
+    "nrIndeksu": "12345",
+    "email": "jan.kowalski@example.com",
+    "stacjonarny": true,
+    "password": "noweHaslo"
   }
 }
 ```

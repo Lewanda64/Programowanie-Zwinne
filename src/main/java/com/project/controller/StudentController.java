@@ -1,6 +1,7 @@
 package com.project.controller;
 
 import java.net.URI;
+import java.security.Principal;
 
 import jakarta.validation.Valid;
 
@@ -65,6 +66,20 @@ public class StudentController {
                 .toUri();
 
         return ResponseEntity.created(location).build();
+    }
+
+    // GET http://localhost:8080/api/studenci/me
+    @GetMapping("/studenci/me")
+    public ResponseEntity<Student> getMe(Principal principal) {
+        return ResponseEntity.of(studentService.getByEmail(principal.getName()));
+    }
+
+    // PUT http://localhost:8080/api/studenci/me
+    @PutMapping("/studenci/me")
+    public ResponseEntity<Student> updateMe(@Valid @RequestBody Student student, Principal principal) {
+        return studentService.updateSelf(principal.getName(), student)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     // PUT http://localhost:8080/api/studenci/1

@@ -28,4 +28,8 @@ public interface StudentService {
     Page<Student> searchByNazwisko(String nazwisko, Pageable pageable);
 
     Optional<Student> getByNrIndeksu(String nrIndeksu);
+
+    Optional<Student> getByEmail(String email);
+
+    Optional<Student> updateSelf(String email, Student student);
 }

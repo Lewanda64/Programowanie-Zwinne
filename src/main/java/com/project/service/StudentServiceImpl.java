@@ -113,4 +113,35 @@ public class StudentServiceImpl implements StudentService {
         }
         return studentRepository.findByNrIndeksu(nrIndeksu);
     }
+
+    @Override
+    public Optional<Student> getByEmail(String email) {
+        if (email == null || email.isBlank()) {
+            return Optional.empty();
+        }
+        return studentRepository.findByEmailIgnoreCase(email);
+    }
+
+    @Override
+    public Optional<Student> updateSelf(String email, Student student) {
+        if (email == null || email.isBlank()) {
+            return Optional.empty();
+        }
+
+        return studentRepository.findByEmailIgnoreCase(email)
+                .map(existing -> {
+                    existing.setImie(student.getImie());
+                    existing.setNazwisko(student.getNazwisko());
+                    existing.setNrIndeksu(student.getNrIndeksu());
+                    existing.setEmail(student.getEmail());
+                    existing.setStacjonarny(student.getStacjonarny());
+
+                    String rawPassword = student.getPassword();
+                    if (rawPassword != null && !rawPassword.isBlank()) {
+                        existing.setPassword(passwordEncoder.encode(rawPassword));
+                    }
+
+                    return studentRepository.save(existing);
+                });
+    }
 }
