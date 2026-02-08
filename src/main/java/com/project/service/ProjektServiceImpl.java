@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.project.error.NotFoundException;
 import com.project.model.Projekt;
+import com.project.model.Student;
 import com.project.repository.ProjektRepository;
 import com.project.repository.ZadanieRepository;
 
@@ -59,7 +60,13 @@ public class ProjektServiceImpl implements ProjektService {
     @Transactional
     public void deleteProjekt(Integer projektId) {
         zadanieRepository.deleteByProjektProjektId(projektId);
-        projektRepository.deleteById(projektId);
+        projektRepository.findById(projektId).ifPresent(projekt -> {
+            for (Student student : new java.util.HashSet<>(projekt.getStudenci())) {
+                projekt.removeStudent(student);
+            }
+            projektRepository.save(projekt);
+            projektRepository.delete(projekt);
+        });
     }
 
     @Override

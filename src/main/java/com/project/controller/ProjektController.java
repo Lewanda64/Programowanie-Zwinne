@@ -34,7 +34,7 @@ public class ProjektController {
  
  // PRZED KAŻDĄ Z PONIŻSZYCH METOD JEST UMIESZCZONA ADNOTACJA (@GetMapping, PostMapping, ... ), KTÓRA OKREŚLA 
  // RODZAJ METODY HTTP, A TAKŻE ADRES I PARAMETRY ŻĄDANIA
- //Przykład żądania wywołującego metodę: GET http://localhost:8080/api/projekty/1
+ //Przykład żądania wywołującego metodę: GET http://localhost:8081/api/projekty/1
  @GetMapping("/projekty/{projektId}")
  ResponseEntity<Projekt> getProjekt(@PathVariable("projektId") Integer projektId){// @PathVariable oznacza,
  return ResponseEntity.ok(projektService.getProjekt(projektId)
@@ -66,13 +66,13 @@ public class ProjektController {
  projektService.deleteProjekt(projektId);
  return new ResponseEntity<Void>(HttpStatus.OK); // 200
  }
- //Przykład żądania wywołującego metodę: http://localhost:8080/api/projekty?page=0&size=10&sort=nazwa,desc
+ //Przykład żądania wywołującego metodę: http://localhost:8081/api/projekty?page=0&size=10&sort=nazwa,desc
  @GetMapping(value = "/projekty")
  Page<Projekt> getProjekty(Pageable pageable) { // @RequestHeader HttpHeaders headers – jeżeli potrzebny 
  return projektService.getProjekty(pageable); // byłby nagłówek, wystarczy dodać drugą zmienną z adnotacją
  }
  
- // Przykład żądania wywołującego metodę: GET http://localhost:8080/api/projekty?nazwa=webowa
+ // Przykład żądania wywołującego metodę: GET http://localhost:8081/api/projekty?nazwa=webowa
  // Metoda zostanie wywołana tylko, gdy w żądaniu będzie przesyłana wartość parametru nazwa.
  @GetMapping(value = "/projekty", params="nazwa")
  Page<Projekt> getProjektyByNazwa(@RequestParam(name="nazwa") String nazwa, Pageable pageable) {

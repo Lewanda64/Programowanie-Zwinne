@@ -12,6 +12,7 @@ import java.time.LocalDate;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import jakarta.persistence.OneToMany;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import jakarta.persistence.ManyToMany;
@@ -61,7 +62,7 @@ private List<Zadanie> zadania;
     inverseJoinColumns = { @JoinColumn(name = "student_id") }
 )
 @JsonIgnoreProperties({"projekty"})
-private Set<Student> studenci;
+private Set<Student> studenci = new HashSet<>();
 
 
 public List<Zadanie> getZadania() {
@@ -78,6 +79,22 @@ public Set<Student> getStudenci() {
 
 public void setStudenci(Set<Student> studenci) {
 	this.studenci = studenci;
+}
+
+public void addStudent(Student student) {
+	if (student == null) {
+		return;
+	}
+	studenci.add(student);
+	student.getProjekty().add(this);
+}
+
+public void removeStudent(Student student) {
+	if (student == null) {
+		return;
+	}
+	studenci.remove(student);
+	student.getProjekty().remove(this);
 }
 
 public Projekt() {

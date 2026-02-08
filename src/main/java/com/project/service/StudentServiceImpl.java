@@ -1,15 +1,22 @@
 package com.project.service;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.project.error.NotFoundException;
 import com.project.model.Student;
+import com.project.model.Projekt;
+import com.project.repository.ProjektRepository;
 import com.project.repository.StudentRepository;
 
 @Service
@@ -17,11 +24,14 @@ public class StudentServiceImpl implements StudentService {
 
     private final StudentRepository studentRepository;
     private final PasswordEncoder passwordEncoder;
+    private final ProjektRepository projektRepository;
 
     @Autowired
-    public StudentServiceImpl(StudentRepository studentRepository, PasswordEncoder passwordEncoder) {
+    public StudentServiceImpl(StudentRepository studentRepository, PasswordEncoder passwordEncoder,
+                              ProjektRepository projektRepository) {
         this.studentRepository = studentRepository;
         this.passwordEncoder = passwordEncoder;
+        this.projektRepository = projektRepository;
     }
 
     @Override
@@ -30,6 +40,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    @Transactional
     public Student createStudent(Student student) {
         if (student.getStudentId() != null) {
             throw new IllegalArgumentException("Nowy student nie powinien miec ustawionego ID");
@@ -39,13 +50,33 @@ public class StudentServiceImpl implements StudentService {
             throw new IllegalArgumentException("Haslo jest wymagane");
         }
         student.setPassword(passwordEncoder.encode(rawPassword));
+        Set<Projekt> requestedProjekty = student.getProjekty();
+        student.setProjekty(new HashSet<>());
         if (student.getRole() == null || student.getRole().isBlank()) {
             student.setRole("ROLE_USER");
         }
-        return studentRepository.save(student);
+        Student savedStudent = studentRepository.save(student);
+
+        if (requestedProjekty != null && !requestedProjekty.isEmpty()) {
+            Set<Projekt> managedProjekty = new HashSet<>();
+            for (Projekt projektRef : requestedProjekty) {
+                Integer projektId = projektRef.getProjektId();
+                if (projektId == null) {
+                    throw new IllegalArgumentException("Projekt musi miec ustawione ID");
+                }
+                Projekt projekt = projektRepository.findById(projektId)
+                        .orElseThrow(() -> new NotFoundException("Projekt o id=" + projektId + " nie istnieje"));
+                projekt.addStudent(savedStudent);
+                managedProjekty.add(projekt);
+            }
+            projektRepository.saveAll(managedProjekty);
+        }
+
+        return savedStudent;
     }
 
     @Override
+    @Transactional
     public Student updateStudent(Student student) {
         if (student.getStudentId() == null) {
             throw new IllegalArgumentException("Student do aktualizacji musi miec ustawione ID");
@@ -61,12 +92,49 @@ public class StudentServiceImpl implements StudentService {
         existing.setEmail(student.getEmail());
         existing.setStacjonarny(student.getStacjonarny());
 
-        // relacja many-to-many (jeśli przesyłasz ją w JSON i chcesz ją nadpisywać)
-        existing.setProjekty(student.getProjekty());
+        Set<Projekt> requestedProjekty = student.getProjekty() == null
+                ? new HashSet<>()
+                : student.getProjekty();
+        Map<Integer, Projekt> desiredById = new HashMap<>();
+        for (Projekt projektRef : requestedProjekty) {
+            Integer projektId = projektRef.getProjektId();
+            if (projektId == null) {
+                throw new IllegalArgumentException("Projekt musi miec ustawione ID");
+            }
+            Projekt projekt = projektRepository.findById(projektId)
+                    .orElseThrow(() -> new NotFoundException("Projekt o id=" + projektId + " nie istnieje"));
+            desiredById.put(projektId, projekt);
+        }
+
+        Map<Integer, Projekt> existingById = new HashMap<>();
+        for (Projekt projekt : existing.getProjekty()) {
+            existingById.put(projekt.getProjektId(), projekt);
+        }
+
+        Set<Projekt> changedProjekty = new HashSet<>();
+        for (Integer existingId : existingById.keySet()) {
+            if (!desiredById.containsKey(existingId)) {
+                Projekt projekt = existingById.get(existingId);
+                projekt.removeStudent(existing);
+                changedProjekty.add(projekt);
+            }
+        }
+
+        for (Integer desiredId : desiredById.keySet()) {
+            if (!existingById.containsKey(desiredId)) {
+                Projekt projekt = desiredById.get(desiredId);
+                projekt.addStudent(existing);
+                changedProjekty.add(projekt);
+            }
+        }
 
         String rawPassword = student.getPassword();
         if (rawPassword != null && !rawPassword.isBlank()) {
             existing.setPassword(passwordEncoder.encode(rawPassword));
+        }
+
+        if (!changedProjekty.isEmpty()) {
+            projektRepository.saveAll(changedProjekty);
         }
 
         return studentRepository.save(existing);
@@ -83,8 +151,18 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    @Transactional
     public void deleteStudent(Integer studentId) {
-        studentRepository.deleteById(studentId);
+        studentRepository.findById(studentId).ifPresent(student -> {
+            Set<Projekt> projekty = new HashSet<>(student.getProjekty());
+            for (Projekt projekt : projekty) {
+                projekt.removeStudent(student);
+            }
+            if (!projekty.isEmpty()) {
+                projektRepository.saveAll(projekty);
+            }
+            studentRepository.delete(student);
+        });
     }
 
     @Override

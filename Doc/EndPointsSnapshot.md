@@ -1,6 +1,6 @@
 # EndPoints Snapshot
 
-Data i godzina: 2026-02-08 16:16:12 CET
+Data i godzina: 2026-02-08 18:53:29 CET
 
 ## Informacje ogolne
 - Bazowa sciezka: `/api`
@@ -140,6 +140,8 @@ Backend zwraca spójny JSON dla bledow (np. 400/404):
 | GET | `/api/studenci?imie={imie}` | Lista studentow filtrowana po imieniu |
 | GET | `/api/studenci?nazwisko={nazwisko}` | Lista studentow filtrowana po nazwisku |
 | GET | `/api/studenci/nrIndeksu/{nrIndeksu}` | Pobranie studenta po numerze indeksu |
+
+Nota: pole `projekty` w payloadach `POST /api/studenci` i `PUT /api/studenci/{studentId}` ustawia relacje w tabeli `projekt_student`. Przekazuj `projektId`; brak projektu zwraca 404, a pusta lista usuwa wszystkie powiazania.
 
 ### POST /api/register
 ```json

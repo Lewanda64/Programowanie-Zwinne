@@ -31,14 +31,14 @@ public class ZadanieController {
         this.zadanieService = zadanieService;
     }
 
-    // GET http://localhost:8080/api/zadania/1
+    // GET http://localhost:8081/api/zadania/1
     @GetMapping("/zadania/{zadanieId}")
     public ResponseEntity<Zadanie> getZadanie(@PathVariable("zadanieId") Integer zadanieId) {
         return ResponseEntity.ok(zadanieService.getZadanie(zadanieId)
                 .orElseThrow(() -> new NotFoundException("Zadanie o id=" + zadanieId + " nie istnieje")));
     }
 
-    // POST http://localhost:8080/api/zadania
+    // POST http://localhost:8081/api/zadania
     @PostMapping("/zadania")
     public ResponseEntity<Void> createZadanie(@Valid @RequestBody Zadanie zadanie) {
         Zadanie created = zadanieService.createZadanie(zadanie);
@@ -52,7 +52,7 @@ public class ZadanieController {
         return ResponseEntity.created(location).build();
     }
 
-    // PUT http://localhost:8080/api/zadania/1
+    // PUT http://localhost:8081/api/zadania/1
     @PutMapping("/zadania/{zadanieId}")
     public ResponseEntity<Void> updateZadanie(@Valid @RequestBody Zadanie zadanie,
                                               @PathVariable("zadanieId") Integer zadanieId) {
@@ -64,7 +64,7 @@ public class ZadanieController {
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
-    // DELETE http://localhost:8080/api/zadania/1
+    // DELETE http://localhost:8081/api/zadania/1
     @DeleteMapping("/zadania/{zadanieId}")
     public ResponseEntity<Void> deleteZadanie(@PathVariable("zadanieId") Integer zadanieId) {
 
@@ -74,13 +74,13 @@ public class ZadanieController {
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
-    // GET http://localhost:8080/api/zadania?page=0&size=10&sort=nazwa,asc
+    // GET http://localhost:8081/api/zadania?page=0&size=10&sort=nazwa,asc
     @GetMapping("/zadania")
     public Page<Zadanie> getZadania(Pageable pageable) {
         return zadanieService.getZadania(pageable);
     }
 
-    // GET http://localhost:8080/api/projekty/1/zadania?page=0&size=10
+    // GET http://localhost:8081/api/projekty/1/zadania?page=0&size=10
     @GetMapping("/projekty/{projektId}/zadania")
     public Page<Zadanie> getZadaniaProjektu(@PathVariable("projektId") Integer projektId,
                                             Pageable pageable) {

@@ -12,6 +12,7 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -66,7 +67,7 @@ public class Student {
 
     @ManyToMany(mappedBy = "studenci")
     @JsonIgnoreProperties({"studenci", "zadania"}) 
-    private Set<Projekt> projekty;
+    private Set<Projekt> projekty = new HashSet<>();
 
     public Student() {}
 
@@ -153,7 +154,21 @@ public class Student {
 		return projekty;
 	}
 
-	public void setProjekty(Set<Projekt> projekty) {
-		this.projekty = projekty;
-	}
+    public void setProjekty(Set<Projekt> projekty) {
+        this.projekty = projekty;
+    }
+
+    public void addProjekt(Projekt projekt) {
+        if (projekt == null) {
+            return;
+        }
+        projekt.addStudent(this);
+    }
+
+    public void removeProjekt(Projekt projekt) {
+        if (projekt == null) {
+            return;
+        }
+        projekt.removeStudent(this);
+    }
 }

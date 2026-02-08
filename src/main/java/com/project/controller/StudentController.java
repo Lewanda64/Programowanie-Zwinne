@@ -33,14 +33,14 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    // GET http://localhost:8080/api/studenci/1
+    // GET http://localhost:8081/api/studenci/1
     @GetMapping("/studenci/{studentId}")
     public ResponseEntity<Student> getStudent(@PathVariable("studentId") Integer studentId) {
         return ResponseEntity.ok(studentService.getStudent(studentId)
                 .orElseThrow(() -> new NotFoundException("Student o id=" + studentId + " nie istnieje")));
     }
 
-    // POST http://localhost:8080/api/studenci
+    // POST http://localhost:8081/api/studenci
     @PostMapping("/studenci")
     public ResponseEntity<Void> createStudent(@Valid @RequestBody Student student) {
         Student created = studentService.createStudent(student);
@@ -54,7 +54,7 @@ public class StudentController {
         return ResponseEntity.created(location).build();
     }
 
-    // POST http://localhost:8080/api/register
+    // POST http://localhost:8081/api/register
     @PostMapping("/register")
     public ResponseEntity<Void> register(@Valid @RequestBody RegisterRequest request) {
         Student student = new Student(request.getImie(), request.getNazwisko(),
@@ -70,14 +70,14 @@ public class StudentController {
         return ResponseEntity.created(location).build();
     }
 
-    // GET http://localhost:8080/api/studenci/me
+    // GET http://localhost:8081/api/studenci/me
     @GetMapping("/studenci/me")
     public ResponseEntity<Student> getMe(Principal principal) {
         return ResponseEntity.ok(studentService.getByEmail(principal.getName())
                 .orElseThrow(() -> new NotFoundException("Student o email=" + principal.getName() + " nie istnieje")));
     }
 
-    // PUT http://localhost:8080/api/studenci/me
+    // PUT http://localhost:8081/api/studenci/me
     @PutMapping("/studenci/me")
     public ResponseEntity<Student> updateMe(@Valid @RequestBody Student student, Principal principal) {
         return studentService.updateSelf(principal.getName(), student)
@@ -85,7 +85,7 @@ public class StudentController {
                 .orElseThrow(() -> new NotFoundException("Student o email=" + principal.getName() + " nie istnieje"));
     }
 
-    // PUT http://localhost:8080/api/studenci/1
+    // PUT http://localhost:8081/api/studenci/1
     @PutMapping("/studenci/{studentId}")
     public ResponseEntity<Void> updateStudent(@Valid @RequestBody Student student,
                                               @PathVariable("studentId") Integer studentId) {
@@ -97,7 +97,7 @@ public class StudentController {
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
-    // DELETE http://localhost:8080/api/studenci/1
+    // DELETE http://localhost:8081/api/studenci/1
     @DeleteMapping("/studenci/{studentId}")
     public ResponseEntity<Void> deleteStudent(@PathVariable("studentId") Integer studentId) {
 
@@ -107,34 +107,34 @@ public class StudentController {
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
-    // GET http://localhost:8080/api/studenci?page=0&size=10
+    // GET http://localhost:8081/api/studenci?page=0&size=10
     @GetMapping("/studenci")
     public Page<Student> getStudenci(Pageable pageable) {
         return studentService.getStudenci(pageable);
     }
 
-    // GET http://localhost:8080/api/studenci?email=jan&page=0&size=10
+    // GET http://localhost:8081/api/studenci?email=jan&page=0&size=10
     @GetMapping(value = "/studenci", params = "email")
     public Page<Student> getStudenciByEmail(@RequestParam(name = "email") String email,
                                             Pageable pageable) {
         return studentService.searchByEmail(email, pageable);
     }
 
-    // GET http://localhost:8080/api/studenci?imie=Jan&page=0&size=10
+    // GET http://localhost:8081/api/studenci?imie=Jan&page=0&size=10
     @GetMapping(value = "/studenci", params = "imie")
     public Page<Student> getStudenciByImie(@RequestParam(name = "imie") String imie,
                                            Pageable pageable) {
         return studentService.searchByImie(imie, pageable);
     }
 
-    // GET http://localhost:8080/api/studenci?nazwisko=Kow&page=0&size=10
+    // GET http://localhost:8081/api/studenci?nazwisko=Kow&page=0&size=10
     @GetMapping(value = "/studenci", params = "nazwisko")
     public Page<Student> getStudenciByNazwisko(@RequestParam(name = "nazwisko") String nazwisko,
                                                Pageable pageable) {
         return studentService.searchByNazwisko(nazwisko, pageable);
     }
 
-    // (opcjonalnie) GET http://localhost:8080/api/studenci/nrIndeksu/12345
+    // (opcjonalnie) GET http://localhost:8081/api/studenci/nrIndeksu/12345
     @GetMapping("/studenci/nrIndeksu/{nrIndeksu}")
     public ResponseEntity<Student> getStudentByNrIndeksu(@PathVariable("nrIndeksu") String nrIndeksu) {
         return ResponseEntity.ok(studentService.getByNrIndeksu(nrIndeksu)
