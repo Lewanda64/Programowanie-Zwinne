@@ -1,115 +1,31 @@
-2026-02-08 19:41:28.948 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2026-02-08 19:41:28.982 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Starting ProjectRestApiApplicationTests using Java 21.0.10 with PID 2285775 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 19:41:28.983 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 19:41:29.562 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 19:41:29.605 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
-2026-02-08 19:41:30.430 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 19:41:30.482 INFO  [Test worker] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
-2026-02-08 19:41:30.513 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 19:41:30.757 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 19:41:30.785 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-08 19:41:30.951 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 19:41:30.953 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-02-08 19:41:30.974 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 19:41:30.993 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-08 19:41:31.816 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 19:41:31.867 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:41:32.122 INFO  [Test worker] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-08 19:41:32.815 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 19:41:32.842 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 19:41:33.492 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Started ProjectRestApiApplicationTests in 4.883 seconds (process running for 5.949)
-2026-02-08 19:41:33.948 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Starting ProjektDeleteIntegrationTest using Java 21.0.10 with PID 2285775 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 19:41:33.948 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 19:41:34.094 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 19:41:34.101 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
-2026-02-08 19:41:34.258 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 19:41:34.261 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 19:41:34.270 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 19:41:34.271 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
-2026-02-08 19:41:34.272 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 19:41:34.273 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
-2026-02-08 19:41:34.274 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 19:41:34.274 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-08 19:41:34.369 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 19:41:34.385 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:41:34.474 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 19:41:34.481 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 19:41:34.662 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-2026-02-08 19:41:34.663 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-2026-02-08 19:41:34.664 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
-2026-02-08 19:41:34.677 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Started ProjektDeleteIntegrationTest in 0.749 seconds (process running for 7.134)
-2026-02-08 19:41:35.491 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Starting RelacjaDeleteIntegrationTest using Java 21.0.10 with PID 2285775 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 19:41:35.492 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 19:41:35.607 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 19:41:35.613 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
-2026-02-08 19:41:35.741 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 19:41:35.743 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 19:41:35.752 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 19:41:35.753 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
-2026-02-08 19:41:35.754 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 19:41:35.754 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
-2026-02-08 19:41:35.754 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 19:41:35.755 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-08 19:41:35.864 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 19:41:35.875 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:41:35.975 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 19:41:35.981 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 19:41:36.102 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-2026-02-08 19:41:36.102 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-2026-02-08 19:41:36.103 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
-2026-02-08 19:41:36.110 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Started RelacjaDeleteIntegrationTest in 0.636 seconds (process running for 8.567)
-2026-02-08 19:41:36.636 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:41:36.640 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-02-08 19:41:36.642 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-02-08 19:41:36.645 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:41:36.646 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
-2026-02-08 19:41:36.646 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
-2026-02-08 19:41:36.648 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:41:36.649 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
-2026-02-08 19:41:36.649 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
-2026-02-08 19:42:05.133 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2026-02-08 19:42:05.172 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - Starting ProjectRestApiApplication using Java 21.0.10 with PID 2288886 (/home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne/build/classes/java/main started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 19:42:05.172 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - The following 1 profile is active: "dev"
-2026-02-08 19:42:05.213 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-08 19:42:05.213 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-08 19:42:05.630 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 19:42:05.663 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
-2026-02-08 19:42:06.393 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
-2026-02-08 19:42:06.403 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
-2026-02-08 19:42:06.404 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-02-08 19:42:06.405 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
-2026-02-08 19:42:06.437 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2026-02-08 19:42:06.437 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1224 ms
-2026-02-08 19:42:06.558 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 19:42:06.596 INFO  [restartedMain] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
-2026-02-08 19:42:06.619 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 19:42:06.822 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 19:42:06.844 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-08 19:42:06.955 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@727b82f7
-2026-02-08 19:42:06.956 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-02-08 19:42:06.977 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 19:42:06.990 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2026-02-09 00:00:21.053 INFO  [http-nio-8081-exec-9] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 398 ms
+2026-02-09 00:04:33.418 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-09 00:04:33.420 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-09 00:04:33.426 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 00:04:33.429 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-09 00:04:33.431 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-09 02:08:55.187 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-02-09 02:08:55.223 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - Starting ProjectRestApiApplication using Java 21.0.10 with PID 4127263 (/home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne/build/classes/java/main started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-09 02:08:55.223 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - The following 1 profile is active: "dev"
+2026-02-09 02:08:55.263 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-09 02:08:55.263 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-09 02:08:55.722 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-09 02:08:55.761 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+2026-02-09 02:08:56.492 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-02-09 02:08:56.503 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-02-09 02:08:56.505 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-09 02:08:56.505 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-02-09 02:08:56.537 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-09 02:08:56.537 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1274 ms
+2026-02-09 02:08:56.651 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-09 02:08:56.688 INFO  [restartedMain] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2026-02-09 02:08:56.714 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-09 02:08:56.934 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-09 02:08:56.957 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-09 02:08:57.071 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@26ff77b3
+2026-02-09 02:08:57.072 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-09 02:08:57.092 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-09 02:08:57.105 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 18.1
@@ -117,488 +33,34 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-02-08 19:42:07.805 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 19:42:08.016 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:42:08.204 INFO  [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-08 19:42:08.839 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 19:42:08.863 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 19:42:09.300 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2026-02-08 19:42:09.319 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
-2026-02-08 19:42:09.329 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
-2026-02-08 19:42:09.338 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - Started ProjectRestApiApplication in 4.556 seconds (process running for 5.012)
-2026-02-08 19:43:45.210 INFO  [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-08 19:43:45.210 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-02-08 19:43:45.212 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2026-02-08 19:44:05.889 ERROR [http-nio-8081-exec-8] o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.data.mapping.PropertyReferenceException: No property 'dataCzasUtworzenia' found for type 'Projekt'; Did you mean 'dataczasUtworzenia'] with root cause
-org.springframework.data.mapping.PropertyReferenceException: No property 'dataCzasUtworzenia' found for type 'Projekt'; Did you mean 'dataczasUtworzenia'
-	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
-	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:455)
-	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:431)
-	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:384)
-	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
-	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:366)
-	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:344)
-	at org.springframework.data.jpa.repository.query.QueryUtils.toJpaOrder(QueryUtils.java:753)
-	at org.springframework.data.jpa.repository.query.QueryUtils.toOrders(QueryUtils.java:706)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:760)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:718)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:452)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:431)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:752)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
-	at jdk.proxy4/jdk.proxy4.$Proxy166.findAll(Unknown Source)
-	at com.project.service.ProjektServiceImpl.getProjekty(ProjektServiceImpl.java:75)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:723)
-	at com.project.service.ProjektServiceImpl$$SpringCGLIB$$0.getProjekty(<generated>)
-	at com.project.controller.ProjektController.getProjekty(ProjektController.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
-	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
-	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:213)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
-	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-02-08 19:44:12.337 ERROR [http-nio-8081-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.data.mapping.PropertyReferenceException: No property 'dataCzasUtworzenia' found for type 'Projekt'; Did you mean 'dataczasUtworzenia'] with root cause
-org.springframework.data.mapping.PropertyReferenceException: No property 'dataCzasUtworzenia' found for type 'Projekt'; Did you mean 'dataczasUtworzenia'
-	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
-	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:455)
-	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:431)
-	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:384)
-	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
-	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:366)
-	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:344)
-	at org.springframework.data.jpa.repository.query.QueryUtils.toJpaOrder(QueryUtils.java:753)
-	at org.springframework.data.jpa.repository.query.QueryUtils.toOrders(QueryUtils.java:706)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:760)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:718)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:452)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:431)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:752)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
-	at jdk.proxy4/jdk.proxy4.$Proxy166.findAll(Unknown Source)
-	at com.project.service.ProjektServiceImpl.getProjekty(ProjektServiceImpl.java:75)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:723)
-	at com.project.service.ProjektServiceImpl$$SpringCGLIB$$0.getProjekty(<generated>)
-	at com.project.controller.ProjektController.getProjekty(ProjektController.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
-	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
-	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:213)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
-	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-02-08 19:44:20.548 ERROR [http-nio-8081-exec-7] o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.data.mapping.PropertyReferenceException: No property 'dataCzasUtworzenia' found for type 'Projekt'; Did you mean 'dataczasUtworzenia'] with root cause
-org.springframework.data.mapping.PropertyReferenceException: No property 'dataCzasUtworzenia' found for type 'Projekt'; Did you mean 'dataczasUtworzenia'
-	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
-	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:455)
-	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:431)
-	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:384)
-	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
-	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:366)
-	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:344)
-	at org.springframework.data.jpa.repository.query.QueryUtils.toJpaOrder(QueryUtils.java:753)
-	at org.springframework.data.jpa.repository.query.QueryUtils.toOrders(QueryUtils.java:706)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:760)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:718)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:452)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:431)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:752)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
-	at jdk.proxy4/jdk.proxy4.$Proxy166.findAll(Unknown Source)
-	at com.project.service.ProjektServiceImpl.getProjekty(ProjektServiceImpl.java:75)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:723)
-	at com.project.service.ProjektServiceImpl$$SpringCGLIB$$0.getProjekty(<generated>)
-	at com.project.controller.ProjektController.getProjekty(ProjektController.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
-	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
-	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:213)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
-	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-02-08 19:45:53.335 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2026-02-08 19:45:53.338 INFO  [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-08 19:45:53.338 INFO  [tomcat-shutdown] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8081"]
-2026-02-08 19:45:53.339 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-02-08 19:45:53.340 INFO  [Thread-5] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8081"]
-2026-02-08 19:45:53.345 INFO  [Thread-5] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:45:53.349 INFO  [Thread-5] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-02-08 19:45:53.353 INFO  [Thread-5] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-02-08 19:45:53.454 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - Starting ProjectRestApiApplication using Java 21.0.10 with PID 2288886 (/home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne/build/classes/java/main started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 19:45:53.454 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - The following 1 profile is active: "dev"
-2026-02-08 19:45:53.619 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 19:45:53.627 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
-2026-02-08 19:45:53.676 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2026-02-08 19:45:53.715 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Starting ProjectRestApiApplicationTests using Java 21.0.10 with PID 2307761 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 19:45:53.717 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 19:45:53.888 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
-2026-02-08 19:45:53.889 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
-2026-02-08 19:45:53.890 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-02-08 19:45:53.890 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
-2026-02-08 19:45:53.905 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2026-02-08 19:45:53.905 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 449 ms
-2026-02-08 19:45:53.971 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 19:45:53.974 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 19:45:53.988 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 19:45:53.989 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
-2026-02-08 19:45:54.019 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@3e2a84b1
-2026-02-08 19:45:54.019 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
-2026-02-08 19:45:54.022 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 19:45:54.024 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
-	Database driver: undefined/unknown
-	Database version: 18.1
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-08 19:45:54.153 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 19:45:54.359 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:45:54.420 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 19:45:54.471 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 3 JPA repository interfaces.
-2026-02-08 19:45:54.534 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 19:45:54.546 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 19:45:54.779 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2026-02-08 19:45:54.796 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
-2026-02-08 19:45:54.798 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
-2026-02-08 19:45:54.802 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - Started ProjectRestApiApplication in 1.381 seconds (process running for 230.477)
-2026-02-08 19:45:54.804 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2026-02-08 19:45:55.304 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 19:45:55.364 INFO  [Test worker] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
-2026-02-08 19:45:55.394 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 19:45:55.659 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 19:45:55.684 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-08 19:45:55.841 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 19:45:55.842 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-02-08 19:45:55.862 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 19:45:55.882 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2026-02-09 02:08:57.910 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-09 02:08:58.127 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 02:08:58.321 INFO  [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-09 02:08:58.924 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-09 02:08:58.948 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-09 02:08:59.406 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-09 02:08:59.428 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-02-09 02:08:59.439 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-02-09 02:08:59.449 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - Started ProjectRestApiApplication in 4.643 seconds (process running for 5.11)
+2026-02-09 02:15:04.213 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-09 02:15:04.215 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-09 02:15:04.219 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 02:15:04.221 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-09 02:15:04.224 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-09 02:17:50.289 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-02-09 02:17:50.322 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Starting ProjectRestApiApplicationTests using Java 21.0.10 with PID 4172263 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-09 02:17:50.323 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 02:17:50.911 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-09 02:17:50.962 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 3 JPA repository interfaces.
+2026-02-09 02:17:51.743 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-09 02:17:51.789 INFO  [Test worker] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2026-02-09 02:17:51.817 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-09 02:17:52.066 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-09 02:17:52.101 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-09 02:17:52.277 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-02-09 02:17:52.278 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-09 02:17:52.297 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-09 02:17:52.315 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -606,24 +68,24 @@ org.springframework.data.mapping.PropertyReferenceException: No property 'dataCz
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-02-08 19:45:56.785 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 19:45:56.844 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:45:57.068 INFO  [Test worker] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-08 19:45:57.812 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 19:45:57.839 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 19:45:58.523 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Started ProjectRestApiApplicationTests in 5.215 seconds (process running for 6.19)
-2026-02-08 19:45:58.999 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Starting ProjektDeleteIntegrationTest using Java 21.0.10 with PID 2307761 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 19:45:59.000 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 19:45:59.153 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 19:45:59.160 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
-2026-02-08 19:45:59.328 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 19:45:59.330 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 19:45:59.340 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 19:45:59.341 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
-2026-02-08 19:45:59.342 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 19:45:59.343 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
-2026-02-08 19:45:59.343 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 19:45:59.344 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2026-02-09 02:17:53.190 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-09 02:17:53.240 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 02:17:53.465 INFO  [Test worker] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-09 02:17:54.203 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-09 02:17:54.231 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-09 02:17:55.043 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Started ProjectRestApiApplicationTests in 5.069 seconds (process running for 6.065)
+2026-02-09 02:17:55.527 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Starting ProjektDeleteIntegrationTest using Java 21.0.10 with PID 4172263 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-09 02:17:55.528 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 02:17:55.709 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-09 02:17:55.716 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2026-02-09 02:17:55.856 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-09 02:17:55.859 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-09 02:17:55.867 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-09 02:17:55.867 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-02-09 02:17:55.869 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-02-09 02:17:55.869 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-02-09 02:17:55.870 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-09 02:17:55.870 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -631,26 +93,26 @@ org.springframework.data.mapping.PropertyReferenceException: No property 'dataCz
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-02-08 19:45:59.438 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 19:45:59.450 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:45:59.538 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 19:45:59.544 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 19:45:59.723 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-2026-02-08 19:45:59.723 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-2026-02-08 19:45:59.724 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
-2026-02-08 19:45:59.737 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Started ProjektDeleteIntegrationTest in 0.762 seconds (process running for 7.404)
-2026-02-08 19:46:00.564 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Starting RelacjaDeleteIntegrationTest using Java 21.0.10 with PID 2307761 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 19:46:00.564 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 19:46:00.684 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 19:46:00.690 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
-2026-02-08 19:46:00.810 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 19:46:00.817 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 19:46:00.829 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 19:46:00.830 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
-2026-02-08 19:46:00.832 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 19:46:00.832 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
-2026-02-08 19:46:00.833 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 19:46:00.834 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2026-02-09 02:17:55.971 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-09 02:17:55.983 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 02:17:56.072 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-09 02:17:56.079 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-09 02:17:56.281 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-02-09 02:17:56.281 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-02-09 02:17:56.282 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-02-09 02:17:56.295 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Started ProjektDeleteIntegrationTest in 0.797 seconds (process running for 7.317)
+2026-02-09 02:17:57.117 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Starting RelacjaDeleteIntegrationTest using Java 21.0.10 with PID 4172263 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-09 02:17:57.117 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 02:17:57.264 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-09 02:17:57.272 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2026-02-09 02:17:57.395 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-09 02:17:57.397 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-09 02:17:57.404 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-09 02:17:57.405 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2026-02-09 02:17:57.407 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2026-02-09 02:17:57.407 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2026-02-09 02:17:57.408 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-09 02:17:57.408 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -658,324 +120,45 @@ org.springframework.data.mapping.PropertyReferenceException: No property 'dataCz
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-02-08 19:46:00.937 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 19:46:00.949 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:46:01.048 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 19:46:01.053 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 19:46:01.263 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-2026-02-08 19:46:01.263 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-2026-02-08 19:46:01.264 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
-2026-02-08 19:46:01.275 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Started RelacjaDeleteIntegrationTest in 0.728 seconds (process running for 8.943)
-2026-02-08 19:46:01.816 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:46:01.820 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-02-08 19:46:01.822 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-02-08 19:46:01.825 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:46:01.826 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
-2026-02-08 19:46:01.827 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
-2026-02-08 19:46:01.830 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 19:46:01.831 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
-2026-02-08 19:46:01.832 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
-2026-02-08 19:46:04.492 INFO  [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-08 19:46:04.492 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-02-08 19:46:04.494 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2026-02-08 20:12:02.162 INFO  [http-nio-8081-exec-3] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 402 ms
-2026-02-08 20:20:58.198 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-08 20:20:58.199 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-02-08 20:20:58.202 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 20:20:58.203 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
-2026-02-08 20:20:58.205 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
-2026-02-08 21:21:05.668 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2026-02-08 21:21:05.706 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Starting ProjectRestApiApplicationTests using Java 21.0.10 with PID 2762676 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 21:21:05.707 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 21:21:06.247 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 21:21:06.306 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 3 JPA repository interfaces.
-2026-02-08 21:21:07.181 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 21:21:07.244 INFO  [Test worker] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
-2026-02-08 21:21:07.278 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 21:21:07.514 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 21:21:07.551 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-08 21:21:07.723 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 21:21:07.725 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-02-08 21:21:07.746 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 21:21:07.768 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-08 21:21:08.615 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 21:21:08.669 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:21:08.896 INFO  [Test worker] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-08 21:21:09.692 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 21:21:09.724 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 21:21:10.412 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Started ProjectRestApiApplicationTests in 5.061 seconds (process running for 6.006)
-2026-02-08 21:21:10.893 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Starting ProjektDeleteIntegrationTest using Java 21.0.10 with PID 2762676 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 21:21:10.893 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 21:21:11.042 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 21:21:11.049 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
-2026-02-08 21:21:11.186 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 21:21:11.188 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 21:21:11.196 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 21:21:11.197 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
-2026-02-08 21:21:11.198 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 21:21:11.198 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
-2026-02-08 21:21:11.199 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 21:21:11.199 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-08 21:21:11.283 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 21:21:11.295 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:21:11.397 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 21:21:11.402 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 21:21:11.589 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-2026-02-08 21:21:11.590 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-2026-02-08 21:21:11.591 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
-2026-02-08 21:21:11.601 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Started ProjektDeleteIntegrationTest in 0.733 seconds (process running for 7.194)
-2026-02-08 21:21:12.385 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Starting RelacjaDeleteIntegrationTest using Java 21.0.10 with PID 2762676 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 21:21:12.385 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 21:21:12.500 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 21:21:12.506 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
-2026-02-08 21:21:12.623 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 21:21:12.625 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 21:21:12.633 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 21:21:12.633 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
-2026-02-08 21:21:12.635 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 21:21:12.635 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
-2026-02-08 21:21:12.635 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 21:21:12.636 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-08 21:21:12.734 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 21:21:12.748 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:21:12.826 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 21:21:12.831 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 21:21:12.955 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-2026-02-08 21:21:12.955 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-2026-02-08 21:21:12.956 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
-2026-02-08 21:21:12.963 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Started RelacjaDeleteIntegrationTest in 0.593 seconds (process running for 8.557)
-2026-02-08 21:21:13.522 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:21:13.527 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-02-08 21:21:13.528 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-02-08 21:21:13.531 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:21:13.532 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
-2026-02-08 21:21:13.533 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
-2026-02-08 21:21:13.535 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:21:13.536 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
-2026-02-08 21:21:13.538 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
-2026-02-08 21:26:03.076 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2026-02-08 21:26:03.114 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Starting ProjectRestApiApplicationTests using Java 21.0.10 with PID 2786330 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 21:26:03.115 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 21:26:03.652 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 21:26:03.694 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
-2026-02-08 21:26:04.503 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 21:26:04.565 INFO  [Test worker] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
-2026-02-08 21:26:04.597 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 21:26:04.838 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 21:26:04.866 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-08 21:26:05.076 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 21:26:05.078 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-02-08 21:26:05.108 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 21:26:05.137 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-08 21:26:06.093 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 21:26:06.153 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:26:06.444 INFO  [Test worker] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-08 21:26:07.371 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 21:26:07.399 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 21:26:08.203 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Started ProjectRestApiApplicationTests in 5.482 seconds (process running for 6.442)
-2026-02-08 21:26:08.658 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Starting ProjektDeleteIntegrationTest using Java 21.0.10 with PID 2786330 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 21:26:08.658 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 21:26:08.824 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 21:26:08.830 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
-2026-02-08 21:26:08.991 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 21:26:08.995 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 21:26:09.006 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 21:26:09.007 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
-2026-02-08 21:26:09.008 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 21:26:09.009 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
-2026-02-08 21:26:09.009 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 21:26:09.010 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-08 21:26:09.111 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 21:26:09.122 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:26:09.228 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 21:26:09.234 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 21:26:09.458 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-2026-02-08 21:26:09.459 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-2026-02-08 21:26:09.460 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
-2026-02-08 21:26:09.473 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Started ProjektDeleteIntegrationTest in 0.839 seconds (process running for 7.712)
-2026-02-08 21:26:10.308 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Starting RelacjaDeleteIntegrationTest using Java 21.0.10 with PID 2786330 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 21:26:10.309 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 21:26:10.435 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 21:26:10.441 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
-2026-02-08 21:26:10.555 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 21:26:10.557 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 21:26:10.570 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 21:26:10.572 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
-2026-02-08 21:26:10.573 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 21:26:10.574 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
-2026-02-08 21:26:10.574 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 21:26:10.575 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-08 21:26:10.664 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 21:26:10.675 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:26:10.763 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 21:26:10.771 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 21:26:10.914 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-2026-02-08 21:26:10.914 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-2026-02-08 21:26:10.915 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
-2026-02-08 21:26:10.924 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Started RelacjaDeleteIntegrationTest in 0.632 seconds (process running for 9.163)
-2026-02-08 21:26:11.444 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:26:11.447 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-02-08 21:26:11.449 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-02-08 21:26:11.452 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:26:11.453 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
-2026-02-08 21:26:11.453 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
-2026-02-08 21:26:11.455 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:26:11.456 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
-2026-02-08 21:26:11.456 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
-2026-02-08 21:35:39.201 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2026-02-08 21:35:39.233 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Starting ProjectRestApiApplicationTests using Java 21.0.10 with PID 2832396 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 21:35:39.234 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 21:35:39.836 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 21:35:39.889 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
-2026-02-08 21:35:40.703 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 21:35:40.755 INFO  [Test worker] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
-2026-02-08 21:35:40.786 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 21:35:41.036 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 21:35:41.065 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-08 21:35:41.239 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 21:35:41.241 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-02-08 21:35:41.265 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 21:35:41.287 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-08 21:35:42.193 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 21:35:42.244 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:35:42.495 INFO  [Test worker] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-08 21:35:43.420 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 21:35:43.458 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 21:35:44.190 INFO  [Test worker] c.p.p.ProjectRestApiApplicationTests - Started ProjectRestApiApplicationTests in 5.29 seconds (process running for 6.321)
-2026-02-08 21:35:44.685 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Starting ProjektDeleteIntegrationTest using Java 21.0.10 with PID 2832396 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 21:35:44.686 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 21:35:44.859 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 21:35:44.868 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
-2026-02-08 21:35:45.044 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 21:35:45.046 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 21:35:45.054 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 21:35:45.055 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
-2026-02-08 21:35:45.057 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 21:35:45.057 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
-2026-02-08 21:35:45.057 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 21:35:45.058 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-08 21:35:45.145 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 21:35:45.157 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:35:45.248 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 21:35:45.256 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 21:35:45.438 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-2026-02-08 21:35:45.438 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-2026-02-08 21:35:45.439 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
-2026-02-08 21:35:45.451 INFO  [Test worker] c.p.p.ProjektDeleteIntegrationTest - Started ProjektDeleteIntegrationTest in 0.797 seconds (process running for 7.582)
-2026-02-08 21:35:46.273 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Starting RelacjaDeleteIntegrationTest using Java 21.0.10 with PID 2832396 (started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 21:35:46.273 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 21:35:46.406 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 21:35:46.413 INFO  [Test worker] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
-2026-02-08 21:35:46.528 INFO  [Test worker] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 21:35:46.530 INFO  [Test worker] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 21:35:46.542 INFO  [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 21:35:46.544 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
-2026-02-08 21:35:46.545 INFO  [Test worker] com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
-2026-02-08 21:35:46.546 INFO  [Test worker] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
-2026-02-08 21:35:46.546 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 21:35:46.547 INFO  [Test worker] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-08 21:35:46.646 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 21:35:46.658 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:35:46.755 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 21:35:46.762 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 21:35:46.879 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-2026-02-08 21:35:46.880 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-2026-02-08 21:35:46.880 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
-2026-02-08 21:35:46.891 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Started RelacjaDeleteIntegrationTest in 0.635 seconds (process running for 9.022)
-2026-02-08 21:35:47.512 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:35:47.516 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-02-08 21:35:47.518 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-02-08 21:35:47.522 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:35:47.523 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
-2026-02-08 21:35:47.524 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
-2026-02-08 21:35:47.527 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:35:47.528 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
-2026-02-08 21:35:47.529 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
-2026-02-08 21:36:06.672 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2026-02-08 21:36:06.715 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - Starting ProjectRestApiApplication using Java 21.0.10 with PID 2835242 (/home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne/build/classes/java/main started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
-2026-02-08 21:36:06.716 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - The following 1 profile is active: "dev"
-2026-02-08 21:36:06.761 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-08 21:36:06.761 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-08 21:36:07.256 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 21:36:07.295 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
-2026-02-08 21:36:08.134 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
-2026-02-08 21:36:08.145 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
-2026-02-08 21:36:08.146 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-02-08 21:36:08.146 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
-2026-02-08 21:36:08.182 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2026-02-08 21:36:08.182 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1421 ms
-2026-02-08 21:36:08.325 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-08 21:36:08.366 INFO  [restartedMain] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
-2026-02-08 21:36:08.394 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-02-08 21:36:08.609 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-08 21:36:08.632 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-08 21:36:08.742 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@185897ab
-2026-02-08 21:36:08.743 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-02-08 21:36:08.765 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-08 21:36:08.778 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2026-02-09 02:17:57.508 INFO  [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-09 02:17:57.520 INFO  [Test worker] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 02:17:57.603 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-09 02:17:57.609 INFO  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-09 02:17:57.743 INFO  [Test worker] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-02-09 02:17:57.744 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-02-09 02:17:57.744 INFO  [Test worker] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-02-09 02:17:57.757 INFO  [Test worker] c.p.p.RelacjaDeleteIntegrationTest - Started RelacjaDeleteIntegrationTest in 0.659 seconds (process running for 8.779)
+2026-02-09 02:17:58.313 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 02:17:58.317 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-09 02:17:58.319 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-09 02:17:58.321 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 02:17:58.322 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-02-09 02:17:58.323 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-02-09 02:17:58.328 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 02:17:58.330 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2026-02-09 02:17:58.331 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2026-02-09 02:22:03.786 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-02-09 02:22:03.828 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - Starting ProjectRestApiApplication using Java 21.0.10 with PID 4194171 (/home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne/build/classes/java/main started by mnich in /home/mnich/Dokumenty/Studia/PBs-InformatykaStosowana/Programowanie zwinne/GitHub/Programowanie-Zwinne)
+2026-02-09 02:22:03.829 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - The following 1 profile is active: "dev"
+2026-02-09 02:22:03.880 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-09 02:22:03.881 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-09 02:22:04.381 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-09 02:22:04.423 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2026-02-09 02:22:05.251 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-02-09 02:22:05.262 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-02-09 02:22:05.264 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-09 02:22:05.264 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-02-09 02:22:05.300 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-09 02:22:05.301 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1420 ms
+2026-02-09 02:22:05.441 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-09 02:22:05.496 INFO  [restartedMain] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2026-02-09 02:22:05.525 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-09 02:22:05.753 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-09 02:22:05.777 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-09 02:22:05.900 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@63478022
+2026-02-09 02:22:05.901 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-09 02:22:05.924 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-09 02:22:05.938 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 18.1
@@ -983,20 +166,20 @@ org.springframework.data.mapping.PropertyReferenceException: No property 'dataCz
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-02-08 21:36:09.578 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-08 21:36:10.387 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 21:36:10.576 INFO  [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-08 21:36:11.154 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-08 21:36:11.177 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-02-08 21:36:11.615 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2026-02-08 21:36:11.634 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
-2026-02-08 21:36:11.644 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
-2026-02-08 21:36:11.653 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - Started ProjectRestApiApplication in 5.398 seconds (process running for 5.949)
-2026-02-08 21:36:53.000 INFO  [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-08 21:36:53.000 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-02-08 21:36:53.001 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2026-02-08 22:06:57.401 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-08 22:06:57.403 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-02-08 22:06:57.408 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-08 22:06:57.411 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-02-08 22:06:57.414 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-09 02:22:06.789 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-09 02:22:07.026 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 02:22:07.224 INFO  [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-09 02:22:07.860 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-09 02:22:07.886 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-02-09 02:22:08.363 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-09 02:22:08.383 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-02-09 02:22:08.393 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-02-09 02:22:08.403 INFO  [restartedMain] c.p.p.ProjectRestApiApplication - Started ProjectRestApiApplication in 4.995 seconds (process running for 5.587)
+2026-02-09 02:22:52.586 INFO  [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-09 02:22:52.586 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-09 02:22:52.588 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-02-09 02:28:58.718 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-09 02:28:58.720 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-09 02:28:58.724 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 02:28:58.727 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-09 02:28:58.730 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -90,8 +90,8 @@ public class ZadanieServiceImpl implements ZadanieService {
         boolean changed = false;
         java.util.List<Sort.Order> orders = new java.util.ArrayList<>();
         for (Sort.Order order : pageable.getSort()) {
-            if ("dataCzasDodania".equals(order.getProperty())) {
-                orders.add(new Sort.Order(order.getDirection(), "dataczasDodania"));
+            if ("dataczasDodania".equals(order.getProperty())) {
+                orders.add(new Sort.Order(order.getDirection(), "dataCzasDodania"));
                 changed = true;
             } else {
                 orders.add(order);

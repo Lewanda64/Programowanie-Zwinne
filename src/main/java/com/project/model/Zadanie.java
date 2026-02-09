@@ -16,6 +16,7 @@ import jakarta.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.CreatedDate;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import jakarta.persistence.EntityListeners;
@@ -46,7 +47,8 @@ public class Zadanie {
 
     @CreatedDate
     @Column(name = "dataczas_dodania", nullable = false, updatable = false)
-    private LocalDateTime dataczasDodania;
+    @JsonAlias("dataczasDodania")
+    private LocalDateTime dataCzasDodania;
   
     @ManyToOne
     @JoinColumn(name = "projekt_id", nullable = false)
@@ -102,11 +104,11 @@ public class Zadanie {
 		this.kolejnosc = kolejnosc;
 	}
 
-	public LocalDateTime getDataczasDodania() {
-		return dataczasDodania;
+	public LocalDateTime getDataCzasDodania() {
+		return dataCzasDodania;
 	}
 
-	public void setDataczasDodania(LocalDateTime dataczasDodania) {
-		this.dataczasDodania = dataczasDodania;
+	public void setDataCzasDodania(LocalDateTime dataCzasDodania) {
+		this.dataCzasDodania = dataCzasDodania;
 	}   
 }

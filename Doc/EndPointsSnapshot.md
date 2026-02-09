@@ -5,7 +5,7 @@ Data i godzina: 2026-02-08 21:32:45 CET
 ## Informacje ogolne
 - Bazowa sciezka: `/api`
 - Zrodlo: kontrolery REST w `src/main/java/com/project/controller`
- - Sortowanie: backend akceptuje `sort` z nazwami pol encji (np. `dataczasUtworzenia`, `dataczasDodania`); aliasy `dataCzasUtworzenia` i `dataCzasDodania` sa mapowane na poprawne pola.
+ - Sortowanie: backend akceptuje `sort` z nazwami pol encji (np. `dataCzasUtworzenia`, `dataCzasDodania`); aliasy `dataczasUtworzenia` i `dataczasDodania` sa mapowane na poprawne pola.
 
 ### Format odpowiedzi bledow (globalny)
 Backend zwraca spójny JSON dla bledow (np. 400/404):

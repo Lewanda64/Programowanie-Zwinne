@@ -18,6 +18,7 @@ import java.util.Set;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.JoinColumn;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import jakarta.persistence.EntityListeners;
@@ -42,7 +43,8 @@ private String opis;
 
 @CreatedDate
 @Column(name = "dataczas_utworzenia", nullable = false, updatable = false)
-private LocalDateTime dataczasUtworzenia;
+@JsonAlias("dataczasUtworzenia")
+private LocalDateTime dataCzasUtworzenia;
 
 @LastModifiedDate
 @Column(name = "dataczas_modyfikacji", insertable = false)
@@ -129,12 +131,12 @@ public void setOpis(String opis) {
 	this.opis = opis;
 }
 
-public LocalDateTime getDataczasUtworzenia() {
-	return dataczasUtworzenia;
+public LocalDateTime getDataCzasUtworzenia() {
+	return dataCzasUtworzenia;
 }
 
-public void setDataczasUtworzenia(LocalDateTime dataczasUtworzenia) {
-	this.dataczasUtworzenia = dataczasUtworzenia;
+public void setDataCzasUtworzenia(LocalDateTime dataCzasUtworzenia) {
+	this.dataCzasUtworzenia = dataCzasUtworzenia;
 }
 
 public LocalDateTime getLastModifiedDate() {
